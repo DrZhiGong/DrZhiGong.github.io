@@ -1,0 +1,26 @@
+# Generated site and local development environment
+/_site/
+/.venv/
+/.vendor/
+/venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+/.local/
+/.tmp/
+/tmp/
+*.log
+
+# Local credentials and editor/OS state
+.env
+.env.*
+!.env.example
+/.vscode/
+/.idea/
+.DS_Store
+Thumbs.db
+
+# Original CVs are private source material, not website assets.
+/*.pdf
+/*.docx
+/*.doc

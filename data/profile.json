@@ -1,0 +1,180 @@
+{
+  "name": "Zhi Gong",
+  "display_name": "Zhi (Daniel) Gong",
+  "role": "Ph.D. Student in Chemistry",
+  "institution": "Rice University",
+  "location": "Houston, Texas",
+  "email": "zhigong@rice.edu",
+  "orcid": "0000-0002-1316-4675",
+  "github": "DrZhiGong",
+  "scholar_url": "https://scholar.google.com/citations?user=Rsr9eGIAAAAJ",
+  "group_url": "https://jsheelab.rice.edu/members",
+  "group_name": "The Shee Group",
+  "intro": "I study electronic structure and chemical reaction mechanisms, with a focus on phaseless auxiliary-field quantum Monte Carlo and its application to catalysis.",
+  "about": [
+    "I am a Ph.D. student in Chemistry at Rice University, advised by James Shee. My current research focuses on phaseless auxiliary-field quantum Monte Carlo (ph-AFQMC), including trial wave functions, overlap calculations, and applications to catalytic mechanisms. I work with restricted, unrestricted, and generalized Hartree-Fock references and full configuration interaction trial wave functions.",
+    "Before joining Rice, I studied Chemistry at Huazhong University of Science and Technology and was an exchange student at the University of California, Berkeley. In Martin Head-Gordon's group, I investigated the role of Criegee intermediates in unsaturated lipid autoxidation using electronic-structure calculations and reaction-path analysis. My earlier work with Jiang Gong explored waste-plastic upcycling, metal-organic frameworks, biodegradable foams, and porous carbon materials."
+  ],
+  "research": [
+    {
+      "id": "quantum-monte-carlo",
+      "title": "Quantum Monte Carlo for chemical reactivity",
+      "kicker": "Electronic structure and catalysis",
+      "summary": "Developing ph-AFQMC overlap calculations and investigating how trial wave functions affect calculations of molecular electronic structure and catalytic mechanisms.",
+      "details": [
+        "My work in the Shee group includes code development for overlap calculations with restricted Hartree-Fock (RHF), unrestricted Hartree-Fock (UHF), generalized Hartree-Fock (GHF), and full configuration interaction (FCI) trial wave functions.",
+        "I also revisit calculations of catalytic mechanisms and contribute to studies of trial-wave-function selection. A related publication examines the accuracy and limitations of UHF trial wave functions for ph-AFQMC calculations of three iron-sulfur clusters."
+      ],
+      "methods": [
+        "Phaseless auxiliary-field quantum Monte Carlo",
+        "Trial wave functions",
+        "Hartree-Fock",
+        "Full configuration interaction",
+        "Scientific computing"
+      ],
+      "institution": "Rice University",
+      "period": "August 2025 - present",
+      "advisor": "James Shee",
+      "status": "Current",
+      "related_dois": [
+        "10.1021/acs.jctc.6c00899"
+      ]
+    },
+    {
+      "id": "lipid-autoxidation",
+      "title": "Criegee intermediates in lipid autoxidation",
+      "kicker": "Reaction mechanisms",
+      "summary": "Investigating the formation and consumption of Criegee intermediates in the autoxidation of unsaturated lipids through computational reaction-mechanism analysis.",
+      "details": [
+        "In the Head-Gordon group, I used autodE to implement an initial mechanistic hypothesis and Q-Chem to perform geometry optimizations, vibrational-frequency analyses, and single-point energy calculations.",
+        "I investigated transition states using the freezing string method and transition-state optimization, then used intrinsic reaction coordinate calculations to examine reaction pathways. This work informed comparisons between the proposed mechanism and earlier studies."
+      ],
+      "methods": [
+        "Q-Chem",
+        "autodE",
+        "Transition-state searches",
+        "Freezing string method",
+        "Intrinsic reaction coordinates"
+      ],
+      "institution": "University of California, Berkeley",
+      "period": "January 2024 - August 2024",
+      "advisor": "Martin Head-Gordon",
+      "status": "Previous",
+      "related_dois": []
+    },
+    {
+      "id": "sustainable-materials",
+      "title": "Waste upcycling and functional materials",
+      "kicker": "Sustainable materials chemistry",
+      "summary": "Exploring routes from waste polyester to metal-organic frameworks and porous carbon, alongside biodegradable foams for solar evaporation and energy conversion.",
+      "details": [
+        "In Jiang Gong's group, I investigated the conversion of waste poly(ethylene terephthalate) into luminescent lanthanum metal-organic framework (La-MOF) nanoparticles. The project combined ball-milling synthesis, materials characterization, and density functional theory calculations to study Fe(III) sensing.",
+        "I also worked on biodegradable porous foams prepared by melt blending and surface coating for simultaneous solar evaporation and thermoelectricity generation. Related collaborations explored chromium metal-organic frameworks and porous carbon nanosheets derived from waste polyester."
+      ],
+      "methods": [
+        "Mechanochemical synthesis",
+        "Metal-organic frameworks",
+        "Polymer upcycling",
+        "Materials characterization",
+        "Density functional theory"
+      ],
+      "institution": "Huazhong University of Science and Technology",
+      "period": "September 2021 - January 2024",
+      "advisor": "Jiang Gong",
+      "status": "Previous",
+      "related_dois": [
+        "10.1007/s12598-024-02696-8",
+        "10.1039/D3TA06133G",
+        "10.1016/j.mtsust.2023.100561",
+        "10.1016/j.susmat.2024.e01022"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Rice University",
+      "degree": "Ph.D. in Chemistry (in progress)",
+      "period": "August 2025 - present"
+    },
+    {
+      "institution": "Huazhong University of Science and Technology",
+      "degree": "B.Tech. in Chemistry",
+      "period": "September 2021 - June 2025"
+    },
+    {
+      "institution": "University of California, Berkeley",
+      "degree": "Exchange student, Berkeley Global Access Program",
+      "period": "January 2024 - August 2024"
+    }
+  ],
+  "honors": [
+    {
+      "title": "China National Scholarship",
+      "organization": "Ministry of Education, China",
+      "year": "2023"
+    },
+    {
+      "title": "Meritorious Winner, Mathematical Contest in Modeling",
+      "organization": "Mathematical Contest in Modeling (MCM)",
+      "year": "2023"
+    },
+    {
+      "title": "Third Prize, 14th Chinese College Mathematics Competition",
+      "organization": "Chinese Mathematical Society",
+      "year": "2023"
+    },
+    {
+      "title": "Outstanding Undergraduate in Academic Performance",
+      "organization": "Huazhong University of Science and Technology",
+      "year": "2022"
+    },
+    {
+      "title": "First Class Excellence Scholarship",
+      "organization": "Huazhong University of Science and Technology",
+      "year": "2021"
+    }
+  ],
+  "skills": [
+    {
+      "category": "Scientific computing",
+      "items": [
+        "Python",
+        "C++",
+        "MATLAB",
+        "OpenMP",
+        "MPI",
+        "Linux"
+      ]
+    },
+    {
+      "category": "Computational chemistry",
+      "items": [
+        "Q-Chem",
+        "autodE",
+        "IQmol",
+        "Avogadro",
+        "Mercury"
+      ]
+    },
+    {
+      "category": "Materials synthesis and characterization",
+      "items": [
+        "Metal-organic framework synthesis",
+        "Mechanochemistry",
+        "Scanning and transmission electron microscopy",
+        "UV-visible spectroscopy",
+        "X-ray photoelectron spectroscopy",
+        "Single-crystal and powder X-ray diffraction",
+        "Gas sorption measurements"
+      ]
+    },
+    {
+      "category": "Languages",
+      "items": [
+        "Mandarin (native)",
+        "English (professional)"
+      ]
+    }
+  ],
+  "source_note": "Based on the CV provided in October 2026."
+}

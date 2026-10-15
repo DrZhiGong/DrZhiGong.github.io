@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>$title</title>
+  <meta name="description" content="$description">
+  <link rel="canonical" href="$canonical">
+  <meta property="og:type" content="$og_type">
+  <meta property="og:title" content="$title">
+  <meta property="og:description" content="$description">
+  <meta property="og:url" content="$canonical">
+  <link rel="icon" href="$base/assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="$base/assets/site.css">
+  <link rel="alternate" type="application/atom+xml" title="Zhi Gong — Articles" href="$base/feed.xml">
+  <script defer src="$base/assets/site.js"></script>
+  $extra_head
+</head>
+<body data-page="$page">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header shell">
+    <a class="wordmark" href="$base/" aria-label="$name, home"><span class="monogram">ZG<span>.</span></span><span>$name<small>Computational chemistry</small></span></a>
+    <nav aria-label="Main navigation">$nav</nav>
+  </header>
+  <main id="main">$content</main>
+  <footer class="site-footer shell">
+    <div><a class="footer-name" href="$base/">$display_name</a><p>$role · $institution</p></div>
+    <div class="footer-links"><a href="mailto:$email">Email ↗</a><a href="$orcid_url">ORCID ↗</a><a href="$scholar_url">Google Scholar ↗</a></div>
+    <p class="copyright">© $year $name · $location</p>
+  </footer>
+</body>
+</html>

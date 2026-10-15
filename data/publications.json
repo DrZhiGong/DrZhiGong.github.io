@@ -1,0 +1,165 @@
+{
+  "schema_version": 1,
+  "orcid": "0000-0002-1316-4675",
+  "source": "https://orcid.org/0000-0002-1316-4675",
+  "fetched_at": "2026-10-15T06:44:40Z",
+  "works": [
+    {
+      "id": "doi:10.1021/acs.jctc.6c00899",
+      "title": "Selecting Optimal Unrestricted Hartree–Fock Trial Wave Functions for Phaseless Auxiliary-Field Quantum Monte Carlo: Accuracy and Limitations in Modeling Three Iron–Sulfur Clusters",
+      "authors": [
+        "Don Danilov",
+        "Brad Ganoe",
+        "Leon Otis",
+        "Zhi Gong",
+        "Zixiang Lu",
+        "James Shee"
+      ],
+      "journal": "Journal of Chemical Theory and Computation",
+      "year": 2026,
+      "date": "2026-08-25",
+      "type": "journal-article",
+      "doi": "10.1021/acs.jctc.6c00899",
+      "url": "https://doi.org/10.1021/acs.jctc.6c00899",
+      "put_code": "222944742",
+      "put_codes": [
+        "222944742"
+      ],
+      "orcid_url": "https://orcid.org/0000-0002-1316-4675"
+    },
+    {
+      "id": "doi:10.1016/j.colsurfa.2026.139945",
+      "title": "Flash joule heating synthesis of N-P Co-doped hierarchical biochar for ultrafast methylene blue adsorption",
+      "authors": [
+        "Xin Chen",
+        "Zhaoyu Wang",
+        "Zhi Gong",
+        "Qiwen Chen",
+        "Xue Wang",
+        "Cong Gu",
+        "Lei Cheng",
+        "Xiangli Wen",
+        "Haihui Lan",
+        "Lvzhou Li",
+        "Yao Hu"
+      ],
+      "journal": "Colloids and Surfaces A: Physicochemical and Engineering Aspects",
+      "year": 2026,
+      "date": "2026-06",
+      "type": "journal-article",
+      "doi": "10.1016/j.colsurfa.2026.139945",
+      "url": "https://doi.org/10.1016/j.colsurfa.2026.139945",
+      "put_code": "205536595",
+      "put_codes": [
+        "205536595"
+      ],
+      "orcid_url": "https://orcid.org/0000-0002-1316-4675"
+    },
+    {
+      "id": "doi:10.1007/s12598-024-02696-8",
+      "title": "Green synthesis of luminescent La-MOF nanoparticle from waste poly(ethylene terephthalate) for high-performance in Fe(III) detection",
+      "authors": [
+        "Zhi Gong",
+        "Zhi-Kui Dai",
+        "Zhi-Yue Dong",
+        "Qiu-Xuan Liu",
+        "Valentin A. Milichko",
+        "Hua-Jian Liu",
+        "Jie Liu",
+        "Ran Niu",
+        "Jiang Gong"
+      ],
+      "journal": "Rare Metals",
+      "year": 2024,
+      "date": "2024-05-21",
+      "type": "journal-article",
+      "doi": "10.1007/s12598-024-02696-8",
+      "url": "https://doi.org/10.1007/s12598-024-02696-8",
+      "put_code": "160873414",
+      "put_codes": [
+        "160873414",
+        "164598709"
+      ],
+      "orcid_url": "https://orcid.org/0000-0002-1316-4675"
+    },
+    {
+      "id": "doi:10.1016/j.susmat.2024.e01022",
+      "title": "Sustainable upcycling of waste polyethylene terephthalate into hierarchically porous carbon nanosheet for interfacial solar steam and hydroelectricity generation",
+      "authors": [
+        "Liu, Q.",
+        "Wang, H.",
+        "Wen, X.",
+        "Hu, G.",
+        "Liu, H.",
+        "Gong, Z.",
+        "Bi, S.",
+        "Wei, Q.",
+        "Niu, R.",
+        "Gong, J."
+      ],
+      "journal": "Sustainable Materials and Technologies",
+      "year": 2024,
+      "date": "2024",
+      "type": "journal-article",
+      "doi": "10.1016/j.susmat.2024.e01022",
+      "url": "https://doi.org/10.1016/j.susmat.2024.e01022",
+      "put_code": "164598711",
+      "put_codes": [
+        "164598711"
+      ],
+      "orcid_url": "https://orcid.org/0000-0002-1316-4675"
+    },
+    {
+      "id": "doi:10.1016/j.mtsust.2023.100561",
+      "title": "Functional upcycling of waste polyester into Cr-MOF towards synergistic interfacial solar evaporation and organic pollutant degradation",
+      "authors": [
+        "Chen, B.",
+        "Liu, L.",
+        "Song, Y.",
+        "Liu, H.",
+        "Gong, Z.",
+        "She, Y.",
+        "Liu, J.",
+        "Niu, R.",
+        "Gong, J."
+      ],
+      "journal": "Materials Today Sustainability",
+      "year": 2023,
+      "date": "2023",
+      "type": "journal-article",
+      "doi": "10.1016/j.mtsust.2023.100561",
+      "url": "https://doi.org/10.1016/j.mtsust.2023.100561",
+      "put_code": "164598712",
+      "put_codes": [
+        "144055622",
+        "164598712"
+      ],
+      "orcid_url": "https://orcid.org/0000-0002-1316-4675"
+    },
+    {
+      "id": "doi:10.1039/d3ta06133g",
+      "title": "Mass production of biodegradable porous foam for simultaneous solar evaporation and thermoelectricity generation",
+      "authors": [
+        "Liu, Z.",
+        "Gong, Z.",
+        "Li, X.",
+        "Ren, J.",
+        "Gong, J.",
+        "Qu, J.",
+        "Niu, R."
+      ],
+      "journal": "Journal of Materials Chemistry A",
+      "year": 2023,
+      "date": "2023",
+      "type": "journal-article",
+      "doi": "10.1039/d3ta06133g",
+      "url": "https://doi.org/10.1039/d3ta06133g",
+      "put_code": "164598710",
+      "put_codes": [
+        "147878281",
+        "164598710"
+      ],
+      "orcid_url": "https://orcid.org/0000-0002-1316-4675"
+    }
+  ]
+}

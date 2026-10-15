@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="620" viewBox="0 0 640 620" fill="none">
+ <defs><radialGradient id="g"><stop stop-color="#2a7364" stop-opacity=".25"/><stop offset="1" stop-color="#2a7364" stop-opacity="0"/></radialGradient><pattern id="dots" width="27" height="27" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r=".8" fill="#164b43" opacity=".2"/></pattern></defs>
+ <rect width="640" height="620" fill="url(#dots)"/>
+ <circle cx="320" cy="295" r="240" fill="url(#g)"/>
+ <g stroke="#2a6d5e" stroke-width="1.15" opacity=".58">
+ <ellipse cx="320" cy="295" rx="244" ry="92" transform="rotate(-33 320 295)"/><ellipse cx="320" cy="295" rx="244" ry="92" transform="rotate(33 320 295)"/><ellipse cx="320" cy="295" rx="244" ry="92" transform="rotate(90 320 295)"/>
+ <ellipse cx="320" cy="295" rx="202" ry="62" transform="rotate(-33 320 295)"/><ellipse cx="320" cy="295" rx="202" ry="62" transform="rotate(33 320 295)"/><ellipse cx="320" cy="295" rx="202" ry="62" transform="rotate(90 320 295)"/>
+ <path d="M80 295h480M320 53v484" stroke-dasharray="3 8" opacity=".4"/>
+ </g>
+ <circle cx="320" cy="295" r="27" fill="#164b43"/><circle cx="320" cy="295" r="40" stroke="#164b43" opacity=".3"/>
+ <g fill="#bc8248"><circle cx="514" cy="178" r="7"/><circle cx="333" cy="531" r="7"/><circle cx="123" cy="190" r="7"/></g>
+ <g fill="#164b43" font-family="Georgia,serif" font-style="italic"><text x="307" y="305" font-size="28" fill="#f6f3eb">Ψ</text><text x="465" y="109" font-size="26">⟨ΨT | Ψ⟩</text></g>
+ <path d="M445 115l-27 39" stroke="#164b43" opacity=".4"/>
+ <text x="320" y="590" text-anchor="middle" fill="#55706a" font-family="Arial,sans-serif" font-size="11" letter-spacing="2.5">A STUDY IN ELECTRONIC STRUCTURE</text>
+</svg>
