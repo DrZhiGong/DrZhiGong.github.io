@@ -15,7 +15,10 @@ only in the local checkout and excluded from Git. A fresh clone can build and
 deploy the public site without those tools.
 
 On the owner's computer, **double-click `Edit Website.cmd`** to continue editing
-in the browser. Local usage and backup instructions are in `.local/EDITING.md`.
+in the browser. **Save & publish** saves public content and sends all saved public
+website changes to GitHub; private draft saves stay local. The editor reports push
+progress, with a link to the GitHub Pages deployment and a retry option on failure.
+Local usage and backup instructions are in `.local/EDITING.md`.
 Those files are intentionally absent from the public repository. Neither the
 editor nor private drafts are included in the GitHub Pages website.
 
@@ -117,8 +120,9 @@ Write the article here.
 Use filenames such as `2026-10-15-a-research-note.md`. Write private drafts under
 the ignored `.local/drafts/` directory. When ready to make a post's source public,
 set `draft = false` and move it into `content/posts/` (the local editor does this
-when saving a note with its draft checkbox cleared). Preview, then run the update
-script to commit and push it.
+when saving a note with its draft checkbox cleared). The owner's editor publishes
+ready notes automatically on save; when editing source directly, preview and run
+the update script to commit and push it.
 
 Future dates are compared against the current UTC date, consistently in local
 previews and GitHub builds; publication happens at the next build. Future-dated
