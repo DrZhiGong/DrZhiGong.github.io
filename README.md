@@ -182,12 +182,18 @@ generated at `/feed.xml`.
 There are two complementary update paths:
 
 - **On each visit to Publications:** the browser requests the current public
-  ORCID record and refreshes the list. A Refresh button lets a visitor repeat
-  this without reloading the page. No token, sign-in, or browser storage is used.
+  ORCID record and refreshes the list automatically. No token, sign-in, or
+  browser storage is used.
 - **Daily static rebuild:** GitHub Actions refreshes ORCID and rebuilds the
   complete website daily at 11:17 UTC (06:17 Chicago in summer, 05:17 in winter),
   on each push to `main`, and on manual **Run workflow**. This keeps the
   searchable, no-JavaScript version current too.
+
+The public pages omit ORCID links, branding, and source prompts. Paper titles
+link to DOI/publisher pages when available; an ORCID-only record remains visible
+as an unlinked title. This is a presentation setting: the ORCID identifier remains
+in the public source/data and browser requests so automatic updates can continue.
+It does not change the visibility of any record on ORCID itself.
 
 ORCID is the source of truth; add missing works to ORCID and mark them public.
 This is live-on-visit plus a scheduled snapshot, not a push notification from

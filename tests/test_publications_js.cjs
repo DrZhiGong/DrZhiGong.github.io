@@ -113,6 +113,30 @@ function documentFixture() {
   return { document, nodes, article };
 }
 
+test("publication titles hide ORCID destinations while preserving paper links", () => {
+  const { document } = documentFixture();
+  const title = "Paper without a publisher link";
+  for (const url of [
+    `https://orcid.org/${ORCID}`,
+    `https://www.orcid.org/${ORCID}`,
+    `https://pub.orcid.org/v3.0/${ORCID}/work/1`,
+    `http://ORCID.ORG./${ORCID}`
+  ]) {
+    for (const links of [{ url }, { url: "", orcid_url: url }]) {
+      const article = api.createPublication(work("1", "", { title, ...links }), document);
+      const heading = article.children[1].children[1];
+      assert.equal(heading.textContent, title);
+      assert.equal(heading.children.length, 0);
+    }
+  }
+  for (const url of ["https://doi.org/10.1234/paper", "https://publisher.example/paper"]) {
+    const article = api.createPublication(work("1", "", { url, orcid_url: `https://orcid.org/${ORCID}` }), document);
+    const link = article.children[1].children[1].children[0];
+    assert.equal(link.tagName, "a");
+    assert.equal(link.href, url);
+  }
+});
+
 test("failed or empty live refresh retains the saved list and honest snapshot timestamp", async () => {
   for (const fetcher of [async () => { throw new Error("offline"); }, async () => ({ path: `/${ORCID}/works`, group: [] })]) {
     const fixture = documentFixture();
@@ -128,7 +152,7 @@ test("failed or empty live refresh retains the saved list and honest snapshot ti
 
 test("successful refresh preserves filters, replaces all works, and renders titles as text", async () => {
   const fixture = documentFixture();
-  const fetcher = async url => url.endsWith("/works") ? { path: `/${ORCID}/works`, group: [{ "work-summary": [summary(1)] }] } : detail(1, { title: { title: { value: "<img src=x onerror=alert(1)>" } } });
+  const fetcher = async url => url.endsWith("/works") ? { path: `/${ORCID}/works`, group: [{ "work-summary": [summary(1)] }] } : detail(1, { title: { title: { value: "<img src=x onerror=alert(1)>" } }, url: { value: "https://publisher.example/paper" } });
   const ui = api.initialize(fixture.document, fetcher);
   await ui.ready;
   const article = fixture.nodes["publication-list"].children[0];

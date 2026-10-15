@@ -70,6 +70,12 @@ class BuildTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             site.build(output=ROOT.parent / "outside")
 
+    def test_publication_links_hide_orcid_but_preserve_publisher_links(self):
+        work = {"title": "A paper", "orcid_url": "https://orcid.org/example/work/1"}
+        for url in ["", "https://orcid.org/example", "https://pub.orcid.org/v3.0/example", "https://ORCID.ORG./example"]:
+            self.assertNotIn('<a href=', site.publication({**work, "url": url}))
+        self.assertIn('href="https://doi.org/10.1234/example"', site.publication({**work, "url": "https://doi.org/10.1234/example"}))
+
     def test_generated_site_links_metadata_and_private_sources(self):
         output = site.build(output=self.folder / "generated")
         pages = {}
@@ -102,6 +108,8 @@ class BuildTests(unittest.TestCase):
         self.assertFalse((output / ".local").exists())
         self.assertTrue((output / "feed.xml").exists())
         self.assertTrue((output / "sitemap.xml").exists())
+        for name in ["index.html", "about/index.html", "publications/index.html"]:
+            self.assertNotIn("orcid", (output / name).read_text(encoding="utf-8").lower())
         expected = json.loads((ROOT / "data" / "publications.json").read_text(encoding="utf-8"))
         self.assertEqual(json.loads((output / "data" / "publications.json").read_text(encoding="utf-8")), expected)
 

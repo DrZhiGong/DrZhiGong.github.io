@@ -50,6 +50,16 @@
     return "";
   }
 
+  function publicationUrl(work) {
+    for (const candidate of [work.url, work.orcid_url]) {
+      const url = safeUrl(candidate);
+      if (!url) continue;
+      const hostname = new URL(url).hostname.replace(/\.+$/, "");
+      if (hostname !== "orcid.org" && !hostname.endsWith(".orcid.org")) return url;
+    }
+    return "";
+  }
+
   function publicationDate(record) {
     const raw = record["publication-date"];
     if (raw == null) return { year: null, date: "" };
@@ -218,7 +228,7 @@
     const body = element("div");
     body.append(element("p", "eyebrow pub-journal", work.journal || work.type.replace(/-/g, " ") || "Research output"));
     const heading = element("h3");
-    const url = safeUrl(work.url) || safeUrl(work.orcid_url);
+    const url = publicationUrl(work);
     if (url) {
       const link = element("a", "", work.title + " ");
       link.href = url;
