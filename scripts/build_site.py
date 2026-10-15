@@ -97,6 +97,9 @@ def build(base_url="https://drzhigong.github.io", output=None):
     if output.exists() and any(output.iterdir()) and not (output / ".generated-site").is_file():
         raise ValueError(f"Refusing to replace unmarked nonempty directory: {output}")
     profile = load_json("profile.json")
+    blog_title = profile.get("blog_title", "Blog")
+    blog_description = profile.get("blog_description", "Notes on computational chemistry, scientific computing, and research methods.")
+    blog_feed_title = f'{profile["name"]} — {blog_title}'
     cache = load_json("publications.json")
     works = cache["works"]
     if not isinstance(works, list):
@@ -115,7 +118,7 @@ def build(base_url="https://drzhigong.github.io", output=None):
         pages[path + "index.html"] = template.substitute(title=e(title), description=e(description), canonical=e(base_url + "/" + path), base=base,
             year=now.year, nav=nav, content=content, page=active, extra_head=extra_head, og_type=og_type,
             name=e(profile["name"]), display_name=e(profile["display_name"]), email=e(profile["email"]), role=e(profile["role"]), institution=e(profile["institution"]),
-            scholar_url=e(safe_url(profile["scholar_url"])), location=e(profile["location"]))
+            scholar_url=e(safe_url(profile["scholar_url"])), location=e(profile["location"]), blog_feed_title=e(blog_feed_title))
 
     research_rows = "".join(f'<a class="research-row" href="{base}/research/#{e(r["id"])}"><span class="row-number">0{i + 1}</span><div><p class="eyebrow">{e(r["kicker"])}</p><h3>{e(r["title"])}</h3><p>{e(r["summary"])}</p></div><span class="row-arrow" aria-hidden="true">↗</span></a>' for i, r in enumerate(profile["research"]))
     selected = [next((w for w in works if w.get("doi", "").lower() == doi), None) for doi in ["10.1021/acs.jctc.6c00899", "10.1007/s12598-024-02696-8"]]
@@ -124,7 +127,7 @@ def build(base_url="https://drzhigong.github.io", output=None):
     <div class="affiliation-band"><div class="shell affiliation-inner"><p><span>Currently</span> {e(profile['role'])}</p><p><span>Research group</span> <a href="{e(profile['group_url'])}">{e(profile['research'][0]['advisor'])} · {e(profile['institution'])} ↗</a></p><p><span>Based in</span> {e(profile['location'])}</p></div></div>
     <section class="section shell"><div class="section-heading"><div><p class="eyebrow">01 / Research</p><h2>Research areas</h2></div><p>My current work focuses on AFQMC method and code development. Earlier projects explored reaction mechanisms and sustainable materials.</p></div><div>{research_rows}</div></section>
     <section class="selected-section"><div class="section shell"><div class="section-heading"><div><p class="eyebrow">02 / Publications</p><h2>Selected publications</h2></div><a class="text-link" href="{base}/publications/">All publications <span aria-hidden="true">→</span></a></div>{''.join(publication(w, True) for w in selected)}</div></section>
-    <section class="section shell home-note"><div><p class="eyebrow">03 / Blog</p><h2>From the blog</h2><p>Notes on computational chemistry, scientific computing, and research methods.</p></div><a class="button button-outline" href="{base}/blog/">Visit the blog <span aria-hidden="true">↗</span></a></section>'''
+    <section class="section shell home-note"><div><p class="eyebrow">03 / Blog</p><h2>{e(blog_title)}</h2><p>{e(blog_description)}</p></div><a class="button button-outline" href="{base}/blog/">Visit the blog <span aria-hidden="true">↗</span></a></section>'''
     person = {"@context": "https://schema.org", "@type": "Person", "name": profile["display_name"], "url": base_url, "jobTitle": profile["role"], "affiliation": {"@type": "CollegeOrUniversity", "name": profile["institution"]}, "sameAs": [profile["scholar_url"]]}
     structured = json.dumps(person, ensure_ascii=False).replace("<", "\\u003c")
     page("", f'{profile["name"]} | Computational Chemistry at {profile["institution"]}', profile["intro"], home, "home", f'<script type="application/ld+json">{structured}</script>')
@@ -146,7 +149,7 @@ def build(base_url="https://drzhigong.github.io", output=None):
 
     cards = "".join(f'<article class="note-card"><p class="eyebrow">{e(p["date"].strftime("%B %d, %Y"))} · {e(" / ".join(p["tags"]))}</p><h2><a href="{base}/blog/{p["slug"]}/">{e(p["title"])} ↗</a></h2><p>{e(p["description"])}</p></article>' for p in posts)
     empty = '<div class="notebook-empty"><h2>No posts published yet.</h2><p>New posts will appear here as they are published.</p></div>'
-    page("blog/", "Blog | Zhi Gong", "Notes on computational chemistry, scientific computing, and research methods.", intro("Writing", "Blog", "Notes on computational chemistry, scientific computing, and research methods.") + f'<section class="section shell notes-list">{cards or empty}</section>', "blog")
+    page("blog/", f'{blog_title} | {profile["name"]}', blog_description, intro("Writing", e(blog_title), blog_description) + f'<section class="section shell notes-list">{cards or empty}</section>', "blog")
     for post in posts:
         content = f'<article class="post shell"><a class="text-link" href="{base}/blog/">← Back to blog</a><p class="eyebrow">{e(post["date"].strftime("%B %d, %Y"))}</p><h1>{e(post["title"])}</h1><p class="lede">{e(post["description"])}</p><div class="prose">{post["html"]}</div></article>'
         page(f'blog/{post["slug"]}/', f'{post["title"]} | Zhi Gong', post["description"], content, "blog", og_type="article")
@@ -173,7 +176,7 @@ def build(base_url="https://drzhigong.github.io", output=None):
         node = ET.SubElement(parent, f"{{{ns}}}{tag}", attrs)
         node.text = value
         return node
-    atom(feed, "title", "Zhi Gong — Blog")
+    atom(feed, "title", blog_feed_title)
     atom(feed, "id", base_url + "/blog/")
     atom(feed, "updated", (posts[0]["date"].isoformat() + "T00:00:00Z") if posts else "2026-10-15T00:00:00Z")
     atom(feed, "link", href=base_url + "/feed.xml", rel="self")

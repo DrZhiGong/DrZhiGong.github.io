@@ -11,6 +11,8 @@
   "group_url": "https://jsheelab.rice.edu/members",
   "group_name": "The Shee Group",
   "intro": "I develop phaseless auxiliary-field quantum Monte Carlo (ph-AFQMC) methods and software for electronic-structure calculations, with a focus on trial wave functions and overlap calculations.",
+  "blog_title": "Blog",
+  "blog_description": "Notes on computational chemistry, scientific computing, and research methods.",
   "about": [
     "I am a Ph.D. student in Chemistry at Rice University, advised by James Shee. My current research focuses on developing phaseless auxiliary-field quantum Monte Carlo (ph-AFQMC) methods and code, with an emphasis on trial wave functions and overlap calculations. I work with restricted, unrestricted, and generalized Hartree-Fock references and full configuration interaction trial wave functions.",
     "Before joining Rice, I studied Chemistry at Huazhong University of Science and Technology and was an exchange student at the University of California, Berkeley. In Martin Head-Gordon's group, I investigated the role of Criegee intermediates in unsaturated lipid autoxidation using electronic-structure calculations and reaction-path analysis. My earlier work with Jiang Gong explored waste-plastic upcycling, metal-organic frameworks, biodegradable foams, and porous carbon materials."

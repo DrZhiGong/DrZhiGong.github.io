@@ -7,6 +7,8 @@ from pathlib import Path
 import tempfile
 import unittest
 from urllib.parse import unquote, urlsplit
+from unittest.mock import patch
+import xml.etree.ElementTree as ET
 
 ROOT = Path(__file__).resolve().parents[1]
 spec = importlib.util.spec_from_file_location("build_site", ROOT / "scripts" / "build_site.py")
@@ -75,6 +77,34 @@ class BuildTests(unittest.TestCase):
         for url in ["", "https://orcid.org/example", "https://pub.orcid.org/v3.0/example", "https://ORCID.ORG./example"]:
             self.assertNotIn('<a href=', site.publication({**work, "url": url}))
         self.assertIn('href="https://doi.org/10.1234/example"', site.publication({**work, "url": "https://doi.org/10.1234/example"}))
+
+    def test_blog_settings_render_safely_and_old_profiles_still_build(self):
+        load_json = site.load_json
+        original = load_json("profile.json")
+        default_title = "Blog"
+        default_description = "Notes on computational chemistry, scientific computing, and research methods."
+        cases = [({}, default_title, default_description),
+                 ({"blog_title": 'Notes & <script>test</script>',
+                   "blog_description": 'Ideas with "quotes" & <img src=x>.'},
+                  'Notes & <script>test</script>', 'Ideas with "quotes" & <img src=x>.')]
+        for index, (settings, title, description) in enumerate(cases):
+            with self.subTest(settings=settings):
+                profile = {key: value for key, value in original.items() if key not in {"blog_title", "blog_description"}}
+                profile.update(settings)
+                with patch.object(site, "load_json", side_effect=lambda name: profile if name == "profile.json" else load_json(name)):
+                    output = site.build(output=self.folder / f"blog-{index}")
+                home = (output / "index.html").read_text(encoding="utf-8")
+                blog = (output / "blog/index.html").read_text(encoding="utf-8")
+                self.assertIn(f'<h2>{site.e(title)}</h2><p>{site.e(description)}</p>', home)
+                self.assertIn(f'<h1>{site.e(title)}</h1>', blog)
+                self.assertIn(f'<title>{site.e(title)} | {site.e(profile["name"])}</title>', blog)
+                self.assertIn(f'name="description" content="{site.e(description)}"', blog)
+                self.assertIn(f'property="og:description" content="{site.e(description)}"', blog)
+                self.assertNotIn('<script>test</script>', home + blog)
+                self.assertNotIn('<img src=x>', home + blog)
+                self.assertIn('href="/blog/" aria-current="page">Blog</a>', blog)
+                feed = ET.parse(output / "feed.xml").getroot()
+                self.assertEqual(feed.findtext('{http://www.w3.org/2005/Atom}title'), f'{profile["name"]} — {title}')
 
     def test_generated_site_links_metadata_and_private_sources(self):
         output = site.build(output=self.folder / "generated")

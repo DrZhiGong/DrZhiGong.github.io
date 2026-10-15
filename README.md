@@ -19,6 +19,8 @@ in the browser. **Save & publish** saves public content and sends all saved publ
 website changes to GitHub; private draft saves stay local. The editor reports push
 progress, with a link to the GitHub Pages deployment and a retry option on failure.
 Local usage and backup instructions are in `.local/EDITING.md`.
+The **Blog** group under **Profile & research** edits the blog title and introduction,
+which are shared by the blog page and the homepage's blog section.
 Those files are intentionally absent from the public repository. Neither the
 editor nor private drafts are included in the GitHub Pages website.
 
