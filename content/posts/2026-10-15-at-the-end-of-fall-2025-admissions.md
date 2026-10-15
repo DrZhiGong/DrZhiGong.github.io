@@ -46,4 +46,4 @@ I do not know what that next life will look like. The possibility of Rice brings
 
 I will leave the story here for now. Let this be a small record of a particular moment: the end of the Fall 2025 admissions cycle, and a nineteen-year-old looking back at the road already traveled while trying to imagine the life still to come.
 
-Just a lonely nineteen-year-old student, with a little more left to say. Meow.
+Just a lonely nineteen-year-old student, with a little more left to say. 
