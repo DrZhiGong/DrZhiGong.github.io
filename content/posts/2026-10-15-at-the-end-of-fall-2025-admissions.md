@@ -7,7 +7,8 @@
 "period" = "The close of the PhD admissions cycle for Fall 2025 entry"
 +++
 
-> **A note on timing:** This post is adapted from a reflection written near the close of the PhD admissions cycle for **Fall 2025 entry ("25 Fall")**. It preserves my perspective at nineteen, when Rice was still a possible next step. References to the present belong to that period; the page date records the preparation of this English version.
+> **A note on timing:** This post is adapted from a reflection written near the close of the PhD admissions cycle for **Fall 2025 entry ("25 Fall")**. It preserves my perspective at nineteen, when Rice was still a possible next step. References to the present belong to that period.
+
 
 This is my first time writing something quite like this here. I thought I would write a summary of my application season, but I keep finding myself drawn to things that have little to do with admissions decisions. So perhaps this will simply be a conversation with myself.
 
