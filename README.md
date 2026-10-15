@@ -3,7 +3,7 @@
 An English personal website for **Zhi (Daniel) Gong**, Ph.D. student in Chemistry
 at Rice University. Prepared for **https://drzhigong.github.io/**.
 
-The public site includes Home, Research, Publications, Articles (the blog), and About.
+The public site includes Home, Research, Publications, Blog, and About.
 Research and biography are based on the CV supplied in October 2026. Public
 publications come from [ORCID](https://orcid.org/0000-0002-1316-4675).
 

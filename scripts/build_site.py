@@ -111,7 +111,7 @@ def build(base_url="https://drzhigong.github.io", output=None):
     now = datetime.now(timezone.utc)
 
     def page(path, title, description, content, active, extra_head="", og_type="website"):
-        nav = "".join(f'<a href="{base}{url}"'+(' aria-current="page"' if key == active else '')+f'>{label}</a>' for key, label, url in [("home", "Home", "/"), ("research", "Research", "/research/"), ("publications", "Publications", "/publications/"), ("blog", "Articles", "/blog/"), ("about", "About", "/about/")])
+        nav = "".join(f'<a href="{base}{url}"'+(' aria-current="page"' if key == active else '')+f'>{label}</a>' for key, label, url in [("home", "Home", "/"), ("research", "Research", "/research/"), ("publications", "Publications", "/publications/"), ("blog", "Blog", "/blog/"), ("about", "About", "/about/")])
         pages[path + "index.html"] = template.substitute(title=e(title), description=e(description), canonical=e(base_url + "/" + path), base=base,
             year=now.year, nav=nav, content=content, page=active, extra_head=extra_head, og_type=og_type,
             name=e(profile["name"]), display_name=e(profile["display_name"]), email=e(profile["email"]), role=e(profile["role"]), institution=e(profile["institution"]),
@@ -124,7 +124,7 @@ def build(base_url="https://drzhigong.github.io", output=None):
     <div class="affiliation-band"><div class="shell affiliation-inner"><p><span>Currently</span> {e(profile['role'])}</p><p><span>Research group</span> <a href="{e(profile['group_url'])}">{e(profile['research'][0]['advisor'])} · {e(profile['institution'])} ↗</a></p><p><span>Based in</span> {e(profile['location'])}</p></div></div>
     <section class="section shell"><div class="section-heading"><div><p class="eyebrow">01 / Research</p><h2>Research areas</h2></div><p>My current work focuses on AFQMC method and code development. Earlier projects explored reaction mechanisms and sustainable materials.</p></div><div>{research_rows}</div></section>
     <section class="selected-section"><div class="section shell"><div class="section-heading"><div><p class="eyebrow">02 / Publications</p><h2>Selected publications</h2></div><a class="text-link" href="{base}/publications/">All publications <span aria-hidden="true">→</span></a></div>{''.join(publication(w, True) for w in selected)}</div></section>
-    <section class="section shell home-note"><div><p class="eyebrow">03 / Articles</p><h2>Research notes &amp; methods</h2><p>Articles on computational chemistry, scientific computing, and research methods.</p></div><a class="button button-outline" href="{base}/blog/">Browse articles <span aria-hidden="true">↗</span></a></section>'''
+    <section class="section shell home-note"><div><p class="eyebrow">03 / Blog</p><h2>From the blog</h2><p>Notes on computational chemistry, scientific computing, and research methods.</p></div><a class="button button-outline" href="{base}/blog/">Visit the blog <span aria-hidden="true">↗</span></a></section>'''
     person = {"@context": "https://schema.org", "@type": "Person", "name": profile["display_name"], "url": base_url, "jobTitle": profile["role"], "affiliation": {"@type": "CollegeOrUniversity", "name": profile["institution"]}, "sameAs": [profile["scholar_url"]]}
     structured = json.dumps(person, ensure_ascii=False).replace("<", "\\u003c")
     page("", f'{profile["name"]} | Computational Chemistry at {profile["institution"]}', profile["intro"], home, "home", f'<script type="application/ld+json">{structured}</script>')
@@ -145,10 +145,10 @@ def build(base_url="https://drzhigong.github.io", output=None):
     page("publications/", "Publications | Zhi Gong", "Publications by Zhi Gong, including manuscripts and patent contributions.", pubs, "publications", f'<script defer src="{base}/assets/publications.js"></script>')
 
     cards = "".join(f'<article class="note-card"><p class="eyebrow">{e(p["date"].strftime("%B %d, %Y"))} · {e(" / ".join(p["tags"]))}</p><h2><a href="{base}/blog/{p["slug"]}/">{e(p["title"])} ↗</a></h2><p>{e(p["description"])}</p></article>' for p in posts)
-    empty = '<div class="notebook-empty"><h2>No articles published yet.</h2><p>Articles and technical notes will be listed here as they are published.</p></div>'
-    page("blog/", "Articles | Zhi Gong", "Articles on computational chemistry, scientific computing, and research methods.", intro("Articles", "Research notes &amp; methods", "Articles on computational chemistry, scientific computing, and research methods.") + f'<section class="section shell notes-list">{cards or empty}</section>', "blog")
+    empty = '<div class="notebook-empty"><h2>No posts published yet.</h2><p>New posts will appear here as they are published.</p></div>'
+    page("blog/", "Blog | Zhi Gong", "Notes on computational chemistry, scientific computing, and research methods.", intro("Writing", "Blog", "Notes on computational chemistry, scientific computing, and research methods.") + f'<section class="section shell notes-list">{cards or empty}</section>', "blog")
     for post in posts:
-        content = f'<article class="post shell"><a class="text-link" href="{base}/blog/">← All articles</a><p class="eyebrow">{e(post["date"].strftime("%B %d, %Y"))}</p><h1>{e(post["title"])}</h1><p class="lede">{e(post["description"])}</p><div class="prose">{post["html"]}</div></article>'
+        content = f'<article class="post shell"><a class="text-link" href="{base}/blog/">← Back to blog</a><p class="eyebrow">{e(post["date"].strftime("%B %d, %Y"))}</p><h1>{e(post["title"])}</h1><p class="lede">{e(post["description"])}</p><div class="prose">{post["html"]}</div></article>'
         page(f'blog/{post["slug"]}/', f'{post["title"]} | Zhi Gong', post["description"], content, "blog", og_type="article")
 
     education = "".join(f'<div class="timeline-row"><p class="eyebrow">{e(item["period"])}</p><div><h3>{e(item["institution"])}</h3><p>{e(item["degree"])}</p></div></div>' for item in profile["education"])
@@ -173,7 +173,7 @@ def build(base_url="https://drzhigong.github.io", output=None):
         node = ET.SubElement(parent, f"{{{ns}}}{tag}", attrs)
         node.text = value
         return node
-    atom(feed, "title", "Zhi Gong — Articles")
+    atom(feed, "title", "Zhi Gong — Blog")
     atom(feed, "id", base_url + "/blog/")
     atom(feed, "updated", (posts[0]["date"].isoformat() + "T00:00:00Z") if posts else "2026-10-15T00:00:00Z")
     atom(feed, "link", href=base_url + "/feed.xml", rel="self")
