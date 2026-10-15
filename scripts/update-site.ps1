@@ -24,8 +24,13 @@ $PSNativeCommandUseErrorActionPreference = $false
 $siteRoot = [System.IO.Path]::GetFullPath((Join-Path $PSScriptRoot '..')).TrimEnd('\', '/')
 $siteUrl = 'https://drzhigong.github.io'
 $allowedPaths = @(
-    'data', 'assets', 'content', 'templates', 'scripts', 'tests', 'editor', '.github',
-    'README.md', 'DEPLOYMENT.md', 'requirements.txt', '.gitignore', '.nojekyll', 'Edit Website.cmd'
+    'data', 'assets', 'content', 'templates', 'scripts', 'tests', '.github',
+    'README.md', 'DEPLOYMENT.md', 'requirements.txt', '.gitignore', '.nojekyll'
+)
+$localOnlyPaths = @(
+    '.local', 'editor', 'Edit Website.cmd', 'scripts/edit-site.ps1',
+    'scripts/editor_server.py', 'scripts/new-post.ps1', 'scripts/new_post.py',
+    'tests/test_editor_server.py'
 )
 
 function Invoke-CheckedGit {
@@ -36,8 +41,19 @@ function Invoke-CheckedGit {
     }
 }
 
+function Test-LocalOnlyPath {
+    param([string]$Path)
+    foreach ($localPath in $localOnlyPaths) {
+        if ($Path -eq $localPath -or $Path.StartsWith("$localPath/", [StringComparison]::OrdinalIgnoreCase)) {
+            return $true
+        }
+    }
+    return $false
+}
+
 function Test-AllowedPath {
     param([string]$Path)
+    if (Test-LocalOnlyPath -Path $Path) { return $false }
     foreach ($allowedPath in $allowedPaths) {
         if ($Path -eq $allowedPath -or $Path.StartsWith("$allowedPath/", [StringComparison]::Ordinal)) {
             return $true
@@ -85,13 +101,17 @@ foreach ($configuredUrl in @($fetchUrls + $pushUrls)) {
 
 # Do not accidentally commit changes the user staged outside the site allowlist.
 $alreadyStaged = @(Invoke-CheckedGit -GitArguments @('-c', 'core.quotepath=false', 'diff', '--cached', '--name-only'))
+$stagedDeletions = @(Invoke-CheckedGit -GitArguments @('-c', 'core.quotepath=false', 'diff', '--cached', '--name-only', '--diff-filter=D'))
 foreach ($stagedPath in $alreadyStaged) {
+    # Removing previously tracked private tools is allowed; adding them is not.
+    if ((Test-LocalOnlyPath -Path $stagedPath) -and $stagedDeletions -contains $stagedPath) { continue }
     if (-not (Test-AllowedPath -Path $stagedPath)) {
         throw "A file outside the website allowlist is already staged: $stagedPath. Unstage it yourself before running this script."
     }
 }
 
 if ($WhatIfPreference) {
+    Write-Host 'What if: verify only public-ready posts and public source files can be committed.'
     if (-not $SkipSync) { Write-Host 'What if: refresh data/publications.json from the public ORCID API.' }
     Write-Host "What if: build _site/ for $siteUrl."
     Write-Host "What if: stage only these website paths: $($allowedPaths -join ', ')."
@@ -123,6 +143,7 @@ try {
     if (-not $PSCmdlet.ShouldProcess($siteRoot, 'Refresh/build the site, stage source changes, and create a commit if needed')) {
         return
     }
+    Invoke-CheckedPython -PythonArguments @('scripts/check_public_source.py', '--worktree')
     if (-not $SkipSync) {
         Invoke-CheckedPython -PythonArguments @('scripts/sync_orcid.py')
     } else {
@@ -141,6 +162,7 @@ try {
     if ($pathsToStage.Count -gt 0) {
         Invoke-CheckedGit -GitArguments (@('add', '--all', '--') + $pathsToStage)
     }
+    Invoke-CheckedPython -PythonArguments @('scripts/check_public_source.py', '--staged')
     & git -C $siteRoot diff --cached --quiet --exit-code
     $diffExitCode = $LASTEXITCODE
     if ($diffExitCode -eq 1) {

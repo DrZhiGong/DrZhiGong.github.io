@@ -7,54 +7,22 @@ The public site includes Home, Research, Publications, Articles (the blog), and 
 Research and biography are based on the CV supplied in October 2026. Public
 publications come from [ORCID](https://orcid.org/0000-0002-1316-4675).
 
-## Edit content in your browser
+## Public source and local editing
 
-This is the local administration interface for the site owner. Visitors see the
-academic website only; no editor link, editing controls, or draft entries are
-included in the published website. The editor's **Notes** section manages the
-public **Articles** section.
+This repository contains the website source, public articles, and the build and
+publication-sync scripts. The owner's browser editor and private drafts are kept
+only in the local checkout and excluded from Git. A fresh clone can build and
+deploy the public site without those tools.
 
-**Double-click `Edit Website.cmd`** in this folder. It opens the local content
-editor in your browser. Keep its terminal window open while editing, then press
-**Ctrl+C** in that window to stop. Alternatively, from PowerShell:
+On the owner's computer, **double-click `Edit Website.cmd`** to continue editing
+in the browser. Local usage and backup instructions are in `.local/EDITING.md`.
+Those files are intentionally absent from the public repository. Neither the
+editor nor private drafts are included in the GitHub Pages website.
 
-```powershell
-.\scripts\edit-site.ps1
-```
-
-The editor is available at **http://127.0.0.1:8000/editor/**. If port 8000 is busy,
-use `.\scripts\edit-site.ps1 -Port 8080`. `-NoBrowser` starts the editor without
-opening a browser automatically.
-
-- **Notes:** select an existing note or create a new one, fill in its title,
-  date, short description, and tags, then write in the Markdown editor. Formatting
-  buttons help with headings, emphasis, links, and code. The adjacent preview
-  updates as you type. The URL slug is set when a note is created and stays stable
-  when you later change its title or date.
-- **Profile & research:** edit your biography, research projects, education,
-  honors, and skills through forms.
-- **Other outputs:** update manuscript status and patent entries through forms.
-- **Save locally** (or **Ctrl/Cmd+S**) writes the ordinary Markdown/JSON files and
-  rebuilds the local website preview. Saving never commits or pushes to GitHub.
-  Open the website preview to see the result. Draft notes can be previewed inside
-  the editor but stay off the public site.
-
-After reviewing your changes, publish with the existing command:
-
-```powershell
-.\scripts\update-site.ps1 -Message "Update notes and research"
-```
-
-The editor runs only on your computer and is not included in the GitHub Pages
-website. It protects unsaved changes when switching notes and refuses to overwrite
-a file changed in another tab or another editor. Previous file versions are saved
-under `.local/editor-backups/`, which is excluded from Git. Restore a backup by
-copying its contents back to the corresponding Markdown/JSON source file.
-
-**Drafts are hidden from the website, not from a public source repository.** When
-you push this repository to GitHub, draft Markdown files are included. Keep
-confidential research outside this folder. ORCID publications still update through
-the existing sync; the editor does not alter your ORCID account.
+Removing previously tracked files from the current branch does not remove them
+from older Git commits. This separation prevents subsequent private drafts and
+local-tool changes from entering normal website updates; it does not rewrite
+repository history.
 
 ## Preview on this computer
 
@@ -69,8 +37,7 @@ The preview rebuilds `_site/` using the saved publication snapshot and does not
 publish anything. After editing content, restart the preview script to rebuild.
 `-Port 8001` selects a different local port.
 
-This checkout already has the Markdown dependency installed locally in `.vendor/`.
-On a different computer, install Git and Python 3.11+ (3.12 recommended), then:
+Install Git and Python 3.11+ (3.12 recommended), then install the dependency:
 
 ```powershell
 py -3 -m venv .venv
@@ -84,50 +51,30 @@ when available, or `python`. You can override with
 If PowerShell blocks local scripts, run a script for this process only with
 `powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\preview.ps1`.
 
-## First publication on GitHub Pages
+## GitHub Pages deployment
 
-1. Sign in to GitHub as **DrZhiGong**.
-2. Create a **public**, empty repository named **DrZhiGong.github.io**.
-   Do not initialize it with a README, license, or `.gitignore`; those files are
-   already prepared locally. If the repository already contains work, reconcile
-   it deliberately before using these scripts; they never force-push.
-3. Configure the local repository:
+The repository is **DrZhiGong/DrZhiGong.github.io**, and the public site is
+**https://drzhigong.github.io/**. In **Settings → Pages → Build and deployment**,
+the source is **GitHub Actions**. The workflow builds the public source and uploads
+only `_site/`; it does not need the local editor or private drafts.
 
-   ```powershell
-   .\scripts\setup-github.ps1 -WhatIf
-   .\scripts\setup-github.ps1
-   ```
+On a new computer, clone this repository and install the dependencies above.
+Check `git config user.name` and `git config user.email` before committing. Use
+your GitHub-verified email or GitHub no-reply address. Authentication is handled
+by the installed Git credential manager; the scripts contain no access tokens.
 
-4. Check your Git commit identity with `git config user.name` and
-   `git config user.email`. If missing, set it with your own GitHub-verified email
-   or your GitHub no-reply address. GitHub authentication is handled by your
-   installed Git credential manager; the scripts contain no access tokens.
-5. In the GitHub repository, open **Settings → Pages → Build and deployment**
-   and set **Source = GitHub Actions**. This project uses a custom static build,
-   so do not select “Deploy from a branch.”
-6. Push the prepared website:
-
-   ```powershell
-   .\scripts\update-site.ps1 -WhatIf
-   .\scripts\update-site.ps1 -Message "Publish my academic website"
-   ```
-
-7. Follow **Actions → Refresh research and deploy GitHub Pages**. Once the
-   deployment succeeds, the site is available at **https://drzhigong.github.io/**.
-   If the initial push happened before Pages was enabled, enable it and use
-   **Actions → Refresh research and deploy GitHub Pages → Run workflow**.
-
-No repository has been created or pushed by preparing these files.
+After pushing changes, follow **Actions → Refresh research and deploy GitHub
+Pages**. You can also trigger **Run workflow** manually. Deployment is complete
+when the workflow succeeds.
 
 ## Everyday editing
 
 | What you want to update | File or command |
 | --- | --- |
-| Biography, research descriptions, education, honors, skills | Editor → Profile & research, or `data/profile.json` |
-| Manuscript status or patent entries | Editor → Other outputs, or `data/manual-publications.json` |
+| Biography, research descriptions, education, honors, skills | `data/profile.json` |
+| Manuscript status or patent entries | `data/manual-publications.json` |
 | Published works | Update their public visibility/details in ORCID |
-| New blog draft | Editor → New note, or `.\scripts\new-post.ps1 "A research note"` |
-| Existing blog posts | Editor → Notes, or `content/posts/*.md` |
+| Public articles | `content/posts/*.md` |
 | Site styling | `assets/site.css` |
 | Shared header, navigation, footer | `templates/base.html` |
 | Page structure | `scripts/build_site.py` |
@@ -143,12 +90,15 @@ commits locally. `-SkipSync` uses the saved ORCID snapshot for the local build;
 the GitHub deployment still requires a successful fresh ORCID request.
 An existing local commit can be pushed by rerunning the update script even if
 there are no new edits. Git errors stop the script; it never pulls, rebases,
-or force-pushes. Only the listed website source paths are staged. Raw PDFs,
-temporary files, and generated output are excluded.
+or force-pushes. Only the listed website source paths are staged. Local editing
+tools, `.local/`, raw PDFs, temporary files, and generated output are excluded.
+The update script refuses draft Markdown in `content/posts/`; private drafts
+belong in `.local/drafts/` until they are ready for public source control.
 
 ## Writing blog posts
 
-Posts are ordinary Markdown files with a small TOML metadata block:
+Public posts are ordinary Markdown files in `content/posts/` with a small TOML
+metadata block:
 
 ```markdown
 +++
@@ -156,7 +106,7 @@ title = "A research note"
 date = "2026-10-15"
 description = "One sentence about this post."
 tags = ["AFQMC", "Methods"]
-draft = true
+draft = false
 +++
 
 ## The question
@@ -164,15 +114,23 @@ draft = true
 Write the article here.
 ```
 
-Use filenames such as `2026-10-15-a-research-note.md`. Set `draft = false` to
-publish. Future dates are compared against the current UTC date, consistently
-in local previews and GitHub builds; publication happens at the next build.
-Drafts and future-dated posts are omitted from the website, sitemap,
-and feed. **Draft source files are still visible in the public GitHub repository**;
-keep confidential research outside this checkout. Markdown headings, links,
-lists, code blocks, images, and tables are supported. Raw HTML is supported for
-your own trusted content. Put public images in `assets/` and use paths such as
-`/assets/figure.png`. The starter draft is intentionally unpublished.
+Use filenames such as `2026-10-15-a-research-note.md`. Write private drafts under
+the ignored `.local/drafts/` directory. When ready to make a post's source public,
+set `draft = false` and move it into `content/posts/` (the local editor does this
+when saving a note with its draft checkbox cleared). Preview, then run the update
+script to commit and push it.
+
+Future dates are compared against the current UTC date, consistently in local
+previews and GitHub builds; publication happens at the next build. Future-dated
+posts are omitted from the website, sitemap, and feed, but **their source is public
+as soon as it is pushed**. Keep a post in `.local/drafts/` for as long as its content
+needs to remain private. Moving an already published post back to drafts does not
+erase its earlier source from Git history.
+
+Markdown headings, links, lists, code blocks, images, and tables are supported.
+Raw HTML is supported for your own trusted content. Put only public images in
+`assets/` and use paths such as `/assets/figure.png`. Private draft attachments
+should stay under `.local/` until publication too.
 
 Each published post gets a separate URL at `/blog/your-slug/`. An Atom feed is
 generated at `/feed.xml`.
@@ -216,24 +174,19 @@ Actions. The on-visit ORCID refresh continues independently of the schedule.
 ## Files and verification
 
 ```text
-assets/                 CSS, browser scripts, original SVG illustrations
-content/posts/          Markdown blog posts and drafts
+assets/                 Public images, CSS, browser scripts, SVG illustrations
+content/posts/          Markdown articles ready for public source control
 data/                   Profile, publication snapshot, manual outputs
 templates/base.html     Shared page template
-editor/                 Local content editor interface (not published)
-Edit Website.cmd        Double-click to start the editor on Windows
-scripts/editor_server.py Local editor server and content saving
-scripts/edit-site.ps1   Local editor launcher
 scripts/build_site.py   Static site generator
 scripts/sync_orcid.py   Public ORCID API sync, no third-party dependencies
-scripts/new_post.py     Draft creator
-scripts/new-post.ps1    Windows draft command with Python detection
 scripts/preview.ps1     Local build and preview
 scripts/setup-github.ps1
 scripts/update-site.ps1
 .github/workflows/pages.yml
 tests/                  Sync, build, browser-data, and Git-script regression checks
 _site/                  Generated website (ignored by Git)
+.local/                 Owner's drafts, backups, instructions (ignored by Git)
 ```
 
 To run checks (use your Python executable in place of `python` if needed):

@@ -18,11 +18,15 @@ $script:assertionCount = 0
 $wrapperRoot = Join-Path $testRoot 'command-wrappers'
 [void][System.IO.Directory]::CreateDirectory($wrapperRoot)
 $savedPath = $env:PATH
+$savedGitCeiling = $env:GIT_CEILING_DIRECTORIES
+# These fixtures live inside the real checkout; do not discover its Git metadata.
+$env:GIT_CEILING_DIRECTORIES = $testRoot
 $env:WEBSITE_TEST_REAL_GIT = $gitExecutable
 $env:WEBSITE_TEST_PUSH_LOG = Join-Path $testRoot 'push.log'
 $env:WEBSITE_TEST_PYTHON_LOG = Join-Path $testRoot 'python.log'
 $env:WEBSITE_TEST_PUSH_EXIT = '0'
 $env:WEBSITE_TEST_BUILD_FAIL = '0'
+$env:WEBSITE_TEST_GUARD_FAIL = ''
 $fakePythonPath = Join-Path $wrapperRoot 'test-python.cmd'
 Set-Content -LiteralPath (Join-Path $wrapperRoot 'git.cmd') -Encoding ascii -Value @'
 @echo off
@@ -36,6 +40,7 @@ exit /b %WEBSITE_TEST_PUSH_EXIT%
 Set-Content -LiteralPath $fakePythonPath -Encoding ascii -Value @'
 @echo off
 echo python>>"%WEBSITE_TEST_PYTHON_LOG%"
+if "%~1"=="scripts/check_public_source.py" if "%~2"=="%WEBSITE_TEST_GUARD_FAIL%" exit /b 8
 if not "%~1"=="scripts/build_site.py" exit /b 0
 if "%WEBSITE_TEST_BUILD_FAIL%"=="1" exit /b 9
 if not exist "_site" mkdir "_site"
@@ -68,7 +73,7 @@ function New-Fixture {
     param([string]$Name)
     $fixtureRoot = Join-Path $testRoot $Name
     [void][System.IO.Directory]::CreateDirectory((Join-Path $fixtureRoot 'scripts'))
-    foreach ($scriptName in @('setup-github.ps1', 'update-site.ps1')) {
+    foreach ($scriptName in @('setup-github.ps1', 'update-site.ps1', 'check_public_source.py')) {
         Copy-Item -LiteralPath (Join-Path $sourceRoot "scripts/$scriptName") -Destination (Join-Path $fixtureRoot "scripts/$scriptName")
     }
     Copy-Item -LiteralPath (Join-Path $sourceRoot '.gitignore') -Destination (Join-Path $fixtureRoot '.gitignore')
@@ -99,13 +104,21 @@ Set-Content -LiteralPath (Join-Path $fixture 'private-notes.txt') -Value 'PRIVAT
 [void][System.IO.Directory]::CreateDirectory((Join-Path $fixture 'editor'))
 Set-Content -LiteralPath (Join-Path $fixture 'editor/index.html') -Value '<h1>Local editor</h1>'
 Set-Content -LiteralPath (Join-Path $fixture 'Edit Website.cmd') -Value '@echo Editor launcher'
+Set-Content -LiteralPath (Join-Path $fixture 'scripts/editor_server.py') -Value '# Local editor server'
+Set-Content -LiteralPath (Join-Path $fixture 'scripts/edit-site.ps1') -Value '# Local editor launcher'
+[void][System.IO.Directory]::CreateDirectory((Join-Path $fixture '.local/drafts'))
+Set-Content -LiteralPath (Join-Path $fixture '.local/drafts/private.md') -Value 'PRIVATE DRAFT TEST'
 [void][System.IO.Directory]::CreateDirectory((Join-Path $fixture '.local/editor-backups'))
 Set-Content -LiteralPath (Join-Path $fixture '.local/editor-backups/old-note.md') -Value 'LOCAL BACKUP TEST'
 & $updateScript -SkipSync -NoPush -PythonExecutable $fakePythonPath -Message 'Initial fixture website'
 $tracked = @(git -C $fixture ls-files)
 Assert-True -Condition ($tracked -contains 'README.md') -Reason 'Website source must be committed.'
-Assert-True -Condition ($tracked -contains 'editor/index.html') -Reason 'Local editor source must be included for future clones.'
-Assert-True -Condition ($tracked -contains 'Edit Website.cmd') -Reason 'Double-click editor launcher must be included.'
+Assert-True -Condition ($tracked -notcontains 'editor/index.html') -Reason 'Local editor source must stay off GitHub.'
+Assert-True -Condition ($tracked -notcontains 'Edit Website.cmd') -Reason 'Double-click editor launcher must stay local.'
+Assert-True -Condition ($tracked -notcontains 'scripts/editor_server.py') -Reason 'Local editor backend must not be staged with public scripts.'
+Assert-True -Condition ($tracked -notcontains 'scripts/edit-site.ps1') -Reason 'Local editor PowerShell launcher must not be staged.'
+Assert-True -Condition ($tracked -notcontains '.local/drafts/private.md') -Reason 'Private drafts must never be included.'
+Assert-True -Condition (Test-Path -LiteralPath (Join-Path $fixture 'Edit Website.cmd')) -Reason 'Ignored tools must remain on disk.'
 Assert-True -Condition ($tracked -notcontains '.local/editor-backups/old-note.md') -Reason 'Local content backups must stay out of Git.'
 Assert-True -Condition ($tracked -notcontains 'Zhi Gong_CV_Rice.pdf') -Reason 'Raw CV must stay out of Git.'
 Assert-True -Condition ($tracked -notcontains 'private-notes.txt') -Reason 'Unlisted personal files must stay out of Git.'
@@ -122,6 +135,22 @@ Assert-True -Condition ((git -C $fixture rev-parse HEAD) -eq $headBeforeFailure)
 Assert-True -Condition ((Get-PushCount) -eq 1) -Reason 'Build failure must not push.'
 Assert-True -Condition ((@(git -C $fixture diff --cached --name-only)).Count -eq 0) -Reason 'Build failure must not stage files.'
 $env:WEBSITE_TEST_BUILD_FAIL = '0'
+
+foreach ($guardPhase in @('--worktree', '--staged')) {
+    $env:WEBSITE_TEST_GUARD_FAIL = $guardPhase
+    Assert-Throws -Action { & $updateScript -SkipSync -PythonExecutable $fakePythonPath } -Pattern 'Python failed.*check_public_source'
+    Assert-True -Condition ((git -C $fixture rev-parse HEAD) -eq $headBeforeFailure) -Reason 'Privacy check failure must not commit.'
+    Assert-True -Condition ((Get-PushCount) -eq 1) -Reason 'Privacy check failure must not push.'
+}
+$env:WEBSITE_TEST_GUARD_FAIL = ''
+git -C $fixture restore --staged -- README.md
+
+git -C $fixture add --force -- editor/index.html
+Assert-Throws -Action { & $updateScript -SkipSync -NoPush -PythonExecutable $fakePythonPath } -Pattern 'outside the website allowlist'
+git -C $fixture rm --cached -- editor/index.html
+git -C $fixture add --force -- scripts/editor_server.py
+Assert-Throws -Action { & $updateScript -SkipSync -NoPush -PythonExecutable $fakePythonPath } -Pattern 'outside the website allowlist'
+git -C $fixture rm --cached -- scripts/editor_server.py
 
 git -C $fixture add -- private-notes.txt
 Assert-Throws -Action { & $updateScript -SkipSync -NoPush -PythonExecutable $fakePythonPath } -Pattern 'outside the website allowlist'
@@ -149,7 +178,8 @@ Assert-Throws -Action { & (Join-Path $nested 'scripts/update-site.ps1') -WhatIf 
 Write-Host "Passed $script:assertionCount assertions. Fixtures retained at: $testRoot"
 } finally {
     $env:PATH = $savedPath
-    foreach ($testEnvironmentVariable in @('WEBSITE_TEST_REAL_GIT', 'WEBSITE_TEST_PUSH_LOG', 'WEBSITE_TEST_PYTHON_LOG', 'WEBSITE_TEST_PUSH_EXIT', 'WEBSITE_TEST_BUILD_FAIL')) {
+    $env:GIT_CEILING_DIRECTORIES = $savedGitCeiling
+    foreach ($testEnvironmentVariable in @('WEBSITE_TEST_REAL_GIT', 'WEBSITE_TEST_PUSH_LOG', 'WEBSITE_TEST_PYTHON_LOG', 'WEBSITE_TEST_PUSH_EXIT', 'WEBSITE_TEST_BUILD_FAIL', 'WEBSITE_TEST_GUARD_FAIL')) {
         [Environment]::SetEnvironmentVariable($testEnvironmentVariable, $null, 'Process')
     }
 }

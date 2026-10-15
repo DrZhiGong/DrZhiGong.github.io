@@ -11,6 +11,15 @@ __pycache__/
 /tmp/
 *.log
 
+# Owner-only editing tools stay on this computer, outside the public repository.
+/Edit Website.cmd
+/editor/
+/scripts/edit-site.ps1
+/scripts/editor_server.py
+/scripts/new-post.ps1
+/scripts/new_post.py
+/tests/test_editor_server.py
+
 # Local credentials and editor/OS state
 .env
 .env.*
