@@ -15,7 +15,9 @@ from urllib.parse import urlsplit
 import xml.etree.ElementTree as ET
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(Path(__file__).resolve().parent))
 sys.path.insert(0, str(ROOT / ".vendor"))
+from render_theory import render_theory
 try:
     import markdown
 except ImportError:
@@ -114,7 +116,7 @@ def build(base_url="https://drzhigong.github.io", output=None):
     now = datetime.now(timezone.utc)
 
     def page(path, title, description, content, active, extra_head="", og_type="website"):
-        nav = "".join(f'<a href="{base}{url}"'+(' aria-current="page"' if key == active else '')+f'>{label}</a>' for key, label, url in [("home", "Home", "/"), ("research", "Research", "/research/"), ("publications", "Publications", "/publications/"), ("blog", "Blog", "/blog/"), ("about", "About", "/about/")])
+        nav = "".join(f'<a href="{base}{url}"'+(' aria-current="page"' if key == active else '')+f'>{label}</a>' for key, label, url in [("home", "Home", "/"), ("research", "Research", "/research/"), ("publications", "Publications", "/publications/"), ("blog", "Blog", "/blog/"), ("theory", "Theory Updates", "/theory/"), ("about", "About", "/about/")])
         pages[path + "index.html"] = template.substitute(title=e(title), description=e(description), canonical=e(base_url + "/" + path), base=base,
             year=now.year, nav=nav, content=content, page=active, extra_head=extra_head, og_type=og_type,
             name=e(profile["name"]), display_name=e(profile["display_name"]), email=e(profile["email"]), role=e(profile["role"]), institution=e(profile["institution"]),
@@ -153,6 +155,12 @@ def build(base_url="https://drzhigong.github.io", output=None):
     for post in posts:
         content = f'<article class="post shell"><a class="text-link" href="{base}/blog/">← Back to blog</a><p class="eyebrow">{e(post["date"].strftime("%B %d, %Y"))}</p><h1>{e(post["title"])}</h1><p class="lede">{e(post["description"])}</p><div class="prose">{post["html"]}</div></article>'
         page(f'blog/{post["slug"]}/', f'{post["title"]} | Zhi Gong', post["description"], content, "blog", og_type="article")
+
+    theory_config = load_json("theory-sources.json")
+    theory_cache = load_json("theory-papers.json")
+    page("theory/", f'{theory_config["title"]} | {profile["name"]}', theory_config["description"],
+         render_theory(theory_config, theory_cache, base=base), "theory",
+         f'<link rel="stylesheet" href="{base}/assets/theory.css"><script defer src="{base}/assets/theory.js"></script>')
 
     education = "".join(f'<div class="timeline-row"><p class="eyebrow">{e(item["period"])}</p><div><h3>{e(item["institution"])}</h3><p>{e(item["degree"])}</p></div></div>' for item in profile["education"])
     honors = "".join(f'<div class="honor-row"><span>{e(h["year"])}</span><div><h3>{e(h["title"])}</h3><p>{e(h["organization"])}</p></div></div>' for h in profile["honors"])
@@ -201,6 +209,7 @@ def build(base_url="https://drzhigong.github.io", output=None):
     shutil.copytree(ROOT / "assets", output / "assets")
     (output / "data").mkdir()
     (output / "data" / "publications.json").write_text(json.dumps(cache, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    (output / "data" / "theory-papers.json").write_text(json.dumps(theory_cache, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     (output / ".nojekyll").touch()
     (output / "robots.txt").write_text(f"User-agent: *\nAllow: /\nSitemap: {base_url}/sitemap.xml\n", encoding="utf-8")
     ET.ElementTree(sitemap).write(output / "sitemap.xml", encoding="utf-8", xml_declaration=True)

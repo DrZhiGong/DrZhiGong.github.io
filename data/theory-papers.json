@@ -1,0 +1,2148 @@
+{
+  "schema_version": 1,
+  "provider": "OpenAlex",
+  "fetched_at": "2026-10-27T16:30:25Z",
+  "last_attempt_at": "2026-10-27T16:30:25Z",
+  "sources": [
+    {
+      "id": "martin-head-gordon",
+      "name": "Martin Head-Gordon",
+      "url": "https://mhggroupberkeley.com/",
+      "openalex_id": "A5015311244",
+      "updated_at": "2026-10-27T16:30:25Z",
+      "status": "ok"
+    },
+    {
+      "id": "shiwei-zhang",
+      "name": "Shiwei Zhang",
+      "url": "https://physics.wm.edu/~shiwei/",
+      "openalex_id": "A5100449694",
+      "updated_at": "2026-10-27T16:30:25Z",
+      "status": "ok"
+    },
+    {
+      "id": "garnet-chan",
+      "name": "Garnet Chan",
+      "url": "https://www.chan-lab.caltech.edu/",
+      "openalex_id": "A5082397890",
+      "updated_at": "2026-10-27T16:30:25Z",
+      "status": "ok"
+    },
+    {
+      "id": "james-shee",
+      "name": "James Shee",
+      "url": "https://jsheelab.rice.edu/",
+      "openalex_id": "A5023400996",
+      "updated_at": "2026-10-27T16:30:25Z",
+      "status": "ok"
+    }
+  ],
+  "works": [
+    {
+      "id": "https://openalex.org/W7223400892",
+      "doi": "10.48550/arxiv.2610.30321",
+      "title": "Extreme competition between stripes and superconductivity in the hole-doped Hubbard model",
+      "authors": [
+        "Ao Chen",
+        "Johnnie Gray",
+        "Si-Jing Du",
+        "Garnet Kin‐Lic Chan"
+      ],
+      "publication_date": "2026-10-21",
+      "year": 2026,
+      "type": "preprint",
+      "venue": "arXiv (Cornell University)",
+      "url": "https://doi.org/10.48550/arxiv.2610.30321",
+      "followed_authors": [
+        "garnet-chan"
+      ],
+      "topics": [
+        "Cold Atom Physics and Bose-Einstein Condensates",
+        "Physics of Superconductivity and Magnetism",
+        "Quantum many-body systems"
+      ]
+    },
+    {
+      "id": "https://openalex.org/W7223145289",
+      "doi": "10.1126/sciadv.aeg7106",
+      "title": "Classical quantum chemical solution of the FeMo-cofactor model to chemical accuracy and its implications",
+      "authors": [
+        "Huanchen Zhai",
+        "Chenghan Li",
+        "Xing Zhang",
+        "Zhendong Li",
+        "Seunghoon Lee",
+        "Garnet Kin‐Lic Chan"
+      ],
+      "publication_date": "2026-10-21",
+      "year": 2026,
+      "type": "article",
+      "venue": "Science Advances",
+      "url": "https://doi.org/10.1126/sciadv.aeg7106",
+      "followed_authors": [
+        "garnet-chan"
+      ],
+      "topics": [
+        "Advanced Chemical Physics Studies",
+        "Metalloenzymes and iron-sulfur proteins",
+        "Quantum Computing Algorithms and Architecture"
+      ]
+    },
+    {
+      "id": "https://openalex.org/W7220456904",
+      "doi": "10.48550/arxiv.2610.02916",
+      "title": "Quasiparticle quantum simulation of materials with the Bethe-Salpeter equation",
+      "authors": [
+        "Jielun Chen",
+        "Jiace Sun",
+        "Garnet Kin‐Lic Chan"
+      ],
+      "publication_date": "2026-10-02",
+      "year": 2026,
+      "type": "preprint",
+      "venue": "arXiv (Cornell University)",
+      "url": "https://doi.org/10.48550/arxiv.2610.02916",
+      "followed_authors": [
+        "garnet-chan"
+      ],
+      "topics": [
+        "Advanced Chemical Physics Studies",
+        "Quantum Computing Algorithms and Architecture",
+        "Quantum many-body systems"
+      ]
+    },
+    {
+      "id": "https://openalex.org/W7214784921",
+      "doi": "10.48550/arxiv.2609.32884",
+      "title": "Reduced scaling implementation of the coupled cluster-based static embedding method, MPCC with density fitting",
+      "authors": [
+        "Avijit Shee",
+        "Fabian M. Faulstich",
+        "K. Birgitta Whaley",
+        "Lin Lin",
+        "Martin Head‐Gordon"
+      ],
+      "publication_date": "2026-09-26",
+      "year": 2026,
+      "type": "preprint",
+      "venue": "arXiv (Cornell University)",
+      "url": "https://doi.org/10.48550/arxiv.2609.32884",
+      "followed_authors": [
+        "martin-head-gordon"
+      ],
+      "topics": [
+        "Advanced Chemical Physics Studies",
+        "Advanced Physical and Chemical Molecular Interactions",
+        "Quantum many-body systems"
+      ]
+    },
+    {
+      "id": "https://openalex.org/W7152626093",
+      "doi": "10.1063/5.0339174",
+      "title": "Coupled-cluster imaginary-time evolution and the coupled-cluster energy variance",
+      "authors": [
+        "Yuhang Ai",
+        "Huanchen Zhai",
+        "Garnet Kin‐Lic Chan"
+      ],
+      "publication_date": "2026-09-15",
+      "year": 2026,
+      "type": "article",
+      "venue": "The Journal of Chemical Physics",
+      "url": "https://doi.org/10.1063/5.0339174",
+      "followed_authors": [
+        "garnet-chan"
+      ],
+      "topics": [
+        "Advanced Chemical Physics Studies",
+        "Atomic and Molecular Physics",
+        "Quantum many-body systems"
+      ]
+    },
+    {
+      "id": "https://openalex.org/W7208764262",
+      "doi": "10.48550/arxiv.2609.03168",
+      "title": "Stochastic Tensor Contraction for Efficient MP2 Exchange",
+      "authors": [
+        "Jiace Sun",
+        "Garnet Kin‐Lic Chan"
+      ],
+      "publication_date": "2026-09-02",
+      "year": 2026,
+      "type": "preprint",
+      "venue": "arXiv (Cornell University)",
+      "url": "https://doi.org/10.48550/arxiv.2609.03168",
+      "followed_authors": [
+        "garnet-chan"
+      ],
+      "topics": [
+        "Advanced Chemical Physics Studies",
+        "Quantum Computing Algorithms and Architecture",
+        "Quantum many-body systems"
+      ]
+    },
+    {
+      "id": "https://openalex.org/W7204918270",
+      "doi": "10.26434/chemrxiv.15008144/v1",
+      "title": "High precision, fast computation and high accuracy? Linear scaling double hybrid DFT calculations with spin-polarization",
+      "authors": [
+        "Yao Shen",
+        "Zhenling Wang",
+        "Tianyi Shi",
+        "Zhe Wang",
+        "Hrishikesh Ram",
+        "Etienne Palos",
+        "Yang Liu",
+        "Xiaoye S. Li",
+        "Martin Head‐Gordon"
+      ],
+      "publication_date": "2026-09-01",
+      "year": 2026,
+      "type": "preprint",
+      "venue": "ChemRxiv",
+      "url": "https://doi.org/10.26434/chemrxiv.15008144/v1",
+      "followed_authors": [
+        "martin-head-gordon"
+      ],
+      "topics": [
+        "Advanced Chemical Physics Studies",
+        "Advanced Physical and Chemical Molecular Interactions",
+        "Parallel Computing and Optimization Techniques"
+      ]
+    },
+    {
+      "id": "https://openalex.org/W7204900850",
+      "doi": "10.1103/v2ms-wmz1",
+      "title": "Framework for Robust Quantum Speedups in Practical Correlated Electronic Structure and Dynamics",
+      "authors": [
+        "Anonymous",
+        "Garnet Kin‐Lic Chan"
+      ],
+      "publication_date": "2026-09-01",
+      "year": 2026,
+      "type": "article",
+      "venue": "Physical Review Letters",
+      "url": "https://doi.org/10.1103/v2ms-wmz1",
+      "followed_authors": [
+        "garnet-chan"
+      ],
+      "topics": [
+        "Advanced Chemical Physics Studies",
+        "Quantum Computing Algorithms and Architecture",
+        "Quantum many-body systems"
+      ]
+    },
+    {
+      "id": "https://openalex.org/W7204756935",
+      "doi": "10.48550/arxiv.2608.27861",
+      "title": "Vectorized Symmetric and Fermionic Tensor Network Implementations for GPU-Accelerated Variational Monte Carlo",
+      "authors": [
+        "Si-Jing Du",
+        "Johnnie Gray",
+        "Ao Chen",
+        "Garnet Kin‐Lic Chan"
+      ],
+      "publication_date": "2026-08-28",
+      "year": 2026,
+      "type": "preprint",
+      "venue": "arXiv (Cornell University)",
+      "url": "https://doi.org/10.48550/arxiv.2608.27861",
+      "followed_authors": [
+        "garnet-chan"
+      ],
+      "topics": [
+        "Physics of Superconductivity and Magnetism",
+        "Quantum Computing Algorithms and Architecture",
+        "Quantum many-body systems"
+      ]
+    },
+    {
+      "id": "https://openalex.org/W7204443839",
+      "doi": "10.48550/arxiv.2608.25154",
+      "title": "An embedding method with constant potential boundary conditions",
+      "authors": [
+        "Lisa Hetzel",
+        "Martin Head‐Gordon",
+        "Christopher Johannes Stein"
+      ],
+      "publication_date": "2026-08-25",
+      "year": 2026,
+      "type": "preprint",
+      "venue": "arXiv (Cornell University)",
+      "url": "https://doi.org/10.48550/arxiv.2608.25154",
+      "followed_authors": [
+        "martin-head-gordon"
+      ],
+      "topics": [
+        "Advanced Chemical Physics Studies",
+        "Advanced Physical and Chemical Molecular Interactions",
+        "Physics of Superconductivity and Magnetism"
+      ]
+    },
+    {
+      "id": "https://openalex.org/W7167216959",
+      "doi": "10.1002/jcc.70482",
+      "title": "PARSEC.py: A Python‐Based Real‐Space Kohn–Sham Density Functional Theory Code Accelerated by Machine Learned Charge Density",
+      "authors": [
+        "Zeyi Zhang",
+        "Carlos Mora Perez",
+        "Patrick Kwon",
+        "Martin Head‐Gordon",
+        "Jin Qian"
+      ],
+      "publication_date": "2026-08-21",
+      "year": 2026,
+      "type": "article",
+      "venue": "Journal of Computational Chemistry",
+      "url": "https://doi.org/10.1002/jcc.70482",
+      "followed_authors": [
+        "martin-head-gordon"
+      ],
+      "topics": [
+        "Advanced Chemical Physics Studies",
+        "Machine Learning in Materials Science",
+        "Parallel Computing and Optimization Techniques"
+      ]
+    },
+    {
+      "id": "https://openalex.org/W7203666385",
+      "doi": "10.48550/arxiv.2608.15557",
+      "title": "Intrinsic Wannier Functions for Hamiltonian downfolding",
+      "authors": [
+        "Shuoxue Li",
+        "Garnet Kin‐Lic Chan"
+      ],
+      "publication_date": "2026-08-16",
+      "year": 2026,
+      "type": "preprint",
+      "venue": "arXiv (Cornell University)",
+      "url": "https://doi.org/10.48550/arxiv.2608.15557",
+      "followed_authors": [
+        "garnet-chan"
+      ],
+      "topics": [
+        "Advanced Chemical Physics Studies",
+        "Machine Learning in Materials Science",
+        "Physics of Superconductivity and Magnetism"
+      ]
+    },
+    {
+      "id": "https://openalex.org/W7203630373",
+      "doi": "10.48550/arxiv.2608.13805",
+      "title": "Fast classical simulation of `Fast, accurate, high-resolution simulation of large-scale Fermi-Hubbard models on a digital quantum processor'",
+      "authors": [
+        "Xiao-Yu Ouyang",
+        "Runze Chi",
+        "Garnet Kin‐Lic Chan"
+      ],
+      "publication_date": "2026-08-13",
+      "year": 2026,
+      "type": "preprint",
+      "venue": "arXiv (Cornell University)",
+      "url": "https://doi.org/10.48550/arxiv.2608.13805",
+      "followed_authors": [
+        "garnet-chan"
+      ],
+      "topics": [
+        "Cold Atom Physics and Bose-Einstein Condensates",
+        "Quantum Computing Algorithms and Architecture",
+        "Quantum many-body systems"
+      ]
+    },
+    {
+      "id": "https://openalex.org/W7202368074",
+      "doi": "10.1021/jacs.6c07627",
+      "title": "Ionization-Driven Oxygen–Oxygen Bond Formation in Mixed CO2–H2O Clusters: The Role of Solvation and Cluster Composition",
+      "authors": [
+        "Nureshan Dias",
+        "Zeyi Zhang",
+        "Alexander K. Lemmens",
+        "Anna C. Wannenmacher",
+        "Jin Qian",
+        "Martin Head‐Gordon",
+        "Musahid Ahmed"
+      ],
+      "publication_date": "2026-08-13",
+      "year": 2026,
+      "type": "article",
+      "venue": "Journal of the American Chemical Society",
+      "url": "https://doi.org/10.1021/jacs.6c07627",
+      "followed_authors": [
+        "martin-head-gordon"
+      ],
+      "topics": [
+        "Advanced Chemical Physics Studies",
+        "Mass Spectrometry Techniques and Applications",
+        "Spectroscopy and Quantum Chemical Studies"
+      ]
+    },
+    {
+      "id": "https://openalex.org/W7130697964",
+      "doi": "10.1073/pnas.2609149123",
+      "title": "Stochastic tensor contraction for quantum chemistry",
+      "authors": [
+        "Jiace Sun",
+        "Garnet Kin‐Lic Chan"
+      ],
+      "publication_date": "2026-08-13",
+      "year": 2026,
+      "type": "article",
+      "venue": "Proceedings of the National Academy of Sciences",
+      "url": "https://doi.org/10.1073/pnas.2609149123",
+      "followed_authors": [
+        "garnet-chan"
+      ],
+      "topics": [
+        "Advanced Chemical Physics Studies",
+        "Quantum Computing Algorithms and Architecture",
+        "Quantum many-body systems"
+      ]
+    },
+    {
+      "id": "https://openalex.org/W7202075058",
+      "doi": "10.26434/chemrxiv.15007236/v1",
+      "title": "Third-order size-consistent Brillouin-Wigner perturbation theory",
+      "authors": [
+        "Zhenling Wang",
+        "Martin Head‐Gordon"
+      ],
+      "publication_date": "2026-08-10",
+      "year": 2026,
+      "type": "preprint",
+      "venue": "ChemRxiv",
+      "url": "https://doi.org/10.26434/chemrxiv.15007236/v1",
+      "followed_authors": [
+        "martin-head-gordon"
+      ],
+      "topics": [
+        "Advanced Chemical Physics Studies",
+        "Advanced Physical and Chemical Molecular Interactions",
+        "Atomic and Molecular Physics"
+      ]
+    },
+    {
+      "id": "https://openalex.org/W7196957793",
+      "doi": "10.1021/acs.jctc.6c00899",
+      "title": "Selecting Optimal Unrestricted Hartree–Fock Trial Wave Functions for Phaseless Auxiliary-Field Quantum Monte Carlo: Accuracy and Limitations in Modeling Three Iron–Sulfur Clusters",
+      "authors": [
+        "Don Danilov",
+        "Brad Ganoe",
+        "Leon Otis",
+        "Zhi Gong",
+        "Zixiang Lu",
+        "James Shee"
+      ],
+      "publication_date": "2026-08-06",
+      "year": 2026,
+      "type": "article",
+      "venue": "Journal of Chemical Theory and Computation",
+      "url": "https://doi.org/10.1021/acs.jctc.6c00899",
+      "followed_authors": [
+        "james-shee"
+      ],
+      "topics": [
+        "Advanced Chemical Physics Studies",
+        "Physics of Superconductivity and Magnetism",
+        "Quantum many-body systems"
+      ]
+    },
+    {
+      "id": "https://openalex.org/W7171819978",
+      "doi": "10.1126/science.adq7402",
+      "title": "Toward an exact quantum many-body treatment of Kondo correlation in magnetic impurities",
+      "authors": [
+        "Tianyu Zhu",
+        "Linqing Peng",
+        "Huanchen Zhai",
+        "Zhi‐Hao Cui",
+        "Runze Chi",
+        "Garnet Kin‐Lic Chan"
+      ],
+      "publication_date": "2026-07-30",
+      "year": 2026,
+      "type": "article",
+      "venue": "Science",
+      "url": "https://doi.org/10.1126/science.adq7402",
+      "followed_authors": [
+        "garnet-chan"
+      ],
+      "topics": [
+        "Physics of Superconductivity and Magnetism",
+        "Quantum and electron transport phenomena",
+        "Rare-earth and actinide compounds"
+      ]
+    },
+    {
+      "id": "https://openalex.org/W4415087278",
+      "doi": "10.1021/acs.jctc.6c00247",
+      "title": "Reactive Chemistry at the Unrestricted Coupled Cluster Level: High-Throughput Calculations for Training Machine Learning Potentials",
+      "authors": [
+        "Alice E. A. Allen",
+        "Rui Li",
+        "Sakib Matin",
+        "Xing Zhang",
+        "Benjamin T. Nebgen",
+        "Nicholas Lubbers",
+        "Justin S. Smith",
+        "Richard A. Messerly",
+        "Sergei Tretiak",
+        "Garnet Kin‐Lic Chan",
+        "Kipton M. Barros"
+      ],
+      "publication_date": "2026-07-14",
+      "year": 2026,
+      "type": "article",
+      "venue": "Journal of Chemical Theory and Computation",
+      "url": "https://doi.org/10.1021/acs.jctc.6c00247",
+      "followed_authors": [
+        "garnet-chan"
+      ],
+      "topics": [
+        "Advanced Chemical Physics Studies",
+        "Advanced Physical and Chemical Molecular Interactions",
+        "Machine Learning in Materials Science"
+      ]
+    },
+    {
+      "id": "https://openalex.org/W7166683128",
+      "doi": "10.48550/arxiv.2606.29133",
+      "title": "Shadow tomography for classical tensor network simulations",
+      "authors": [
+        "Jiace Sun",
+        "Garnet Kin‐Lic Chan"
+      ],
+      "publication_date": "2026-06-28",
+      "year": 2026,
+      "type": "preprint",
+      "venue": "arXiv (Cornell University)",
+      "url": "https://doi.org/10.48550/arxiv.2606.29133",
+      "followed_authors": [
+        "garnet-chan"
+      ],
+      "topics": [
+        "Quantum Computing Algorithms and Architecture",
+        "Quantum Mechanics and Applications",
+        "Quantum many-body systems"
+      ]
+    },
+    {
+      "id": "https://openalex.org/W4416712260",
+      "doi": "10.1073/pnas.2600303123",
+      "title": "In search of exotic pairing in the Hubbard model: Many-body computation and quantum gas microscopy",
+      "authors": [
+        "Chunhan Feng",
+        "Thomas R. Hartke",
+        "Yuan-Yao He",
+        "Botond Oreg",
+        "Carter Turnbaugh",
+        "Ningyuan Jia",
+        "Martin W. Zwierlein",
+        "Shiwei Zhang"
+      ],
+      "publication_date": "2026-06-17",
+      "year": 2026,
+      "type": "article",
+      "venue": "Proceedings of the National Academy of Sciences",
+      "url": "https://doi.org/10.1073/pnas.2600303123",
+      "followed_authors": [
+        "shiwei-zhang"
+      ],
+      "topics": [
+        "Cold Atom Physics and Bose-Einstein Condensates",
+        "Physics of Superconductivity and Magnetism",
+        "Quantum many-body systems"
+      ]
+    },
+    {
+      "id": "https://openalex.org/W4415257498",
+      "doi": "10.1038/s41586-026-10654-w",
+      "title": "Visualizing the impact of quenched disorder on 2D electron Wigner solids",
+      "authors": [
+        "Zhehao Ge",
+        "Conor Smith",
+        "Zehao He",
+        "Yubo Yang",
+        "Qize Li",
+        "Ha-Leem Kim",
+        "Ziyu Xiang",
+        "Jianghan Xiao",
+        "Wenjie Zhou",
+        "Salman Kahn",
+        "Aining Hu",
+        "Melike Erdi",
+        "Rounak Banerjee",
+        "Takashi Taniguchi",
+        "Kenji Watanabe",
+        "Seth Ariel Tongay",
+        "Miguel A. Morales",
+        "Shiwei Zhang",
+        "Feng Wang",
+        "Michael F. Crommie"
+      ],
+      "publication_date": "2026-06-17",
+      "year": 2026,
+      "type": "article",
+      "venue": "Nature",
+      "url": "https://doi.org/10.1038/s41586-026-10654-w",
+      "followed_authors": [
+        "shiwei-zhang"
+      ],
+      "topics": [
+        "2D Materials and Applications",
+        "Quantum and electron transport phenomena",
+        "Topological Materials and Phenomena"
+      ]
+    },
+    {
+      "id": "https://openalex.org/W7161154305",
+      "doi": "10.48550/arxiv.2605.12727",
+      "title": "Reduction of finite-size effects for second-order Møller-Plesset perturbation theory with singularity subtraction",
+      "authors": [
+        "Stephen Jon Quiton",
+        "Juan D. F. Pottecher",
+        "Martin Head‐Gordon",
+        "Lin Lin"
+      ],
+      "publication_date": "2026-05-12",
+      "year": 2026,
+      "type": "preprint",
+      "venue": "arXiv (Cornell University)",
+      "url": "https://doi.org/10.48550/arxiv.2605.12727",
+      "followed_authors": [
+        "martin-head-gordon"
+      ],
+      "topics": [
+        "Advanced Chemical Physics Studies",
+        "Machine Learning in Materials Science",
+        "Physics of Superconductivity and Magnetism"
+      ]
+    },
+    {
+      "id": "https://openalex.org/W7160418152",
+      "doi": "10.1063/5.0327679",
+      "title": "Consistent inclusion of triple substitutions within a coupled cluster based static quantum embedding theory",
+      "authors": [
+        "Avijit Shee",
+        "Fabian M. Faulstich",
+        "K. Birgitta Whaley",
+        "Lin Lin",
+        "Martin Head‐Gordon"
+      ],
+      "publication_date": "2026-05-06",
+      "year": 2026,
+      "type": "article",
+      "venue": "The Journal of Chemical Physics",
+      "url": "https://doi.org/10.1063/5.0327679",
+      "followed_authors": [
+        "martin-head-gordon"
+      ],
+      "topics": [
+        "Advanced Chemical Physics Studies",
+        "Advanced Physical and Chemical Molecular Interactions",
+        "Atomic and Molecular Physics"
+      ]
+    },
+    {
+      "id": "https://openalex.org/W7160372582",
+      "doi": "10.48550/arxiv.2605.03270",
+      "title": "Can phaseless auxiliary-field quantum Monte Carlo with broken symmetry trials describe iron-sulfur clusters?",
+      "authors": [
+        "Eirik F. Kjønstad",
+        "Huanchen Zhai",
+        "James Shee",
+        "Sandeep Sharma",
+        "Garnet Kin‐Lic Chan"
+      ],
+      "publication_date": "2026-05-05",
+      "year": 2026,
+      "type": "preprint",
+      "venue": "arXiv (Cornell University)",
+      "url": "https://doi.org/10.48550/arxiv.2605.03270",
+      "followed_authors": [
+        "garnet-chan",
+        "james-shee"
+      ],
+      "topics": [
+        "Advanced Chemical Physics Studies",
+        "Physics of Superconductivity and Magnetism",
+        "Quantum many-body systems"
+      ]
+    },
+    {
+      "id": "https://openalex.org/W7160419797",
+      "doi": "10.48550/arxiv.2605.03123",
+      "title": "ffsim: Faster simulation of fermionic quantum circuits",
+      "authors": [
+        "Kevin J. Sung",
+        "Inho Choi",
+        "Mirko Amico",
+        "Bartholomew Andrews",
+        "Esra Ayantuna",
+        "Yukio Kawashima",
+        "Wan-Hsuan Lin",
+        "David Omanovic",
+        "Samuele Piccinelli",
+        "Javier Robledo Moreno",
+        "Abdullah Ash Saki",
+        "James Shee",
+        "Soyoung Shin",
+        "Minh C. Tran",
+        "Kento Ueda",
+        "Haimeng Zhang",
+        "Mario Motta"
+      ],
+      "publication_date": "2026-05-04",
+      "year": 2026,
+      "type": "preprint",
+      "venue": "arXiv (Cornell University)",
+      "url": "https://doi.org/10.48550/arxiv.2605.03123",
+      "followed_authors": [
+        "james-shee"
+      ],
+      "topics": [
+        "Advanced Chemical Physics Studies",
+        "Quantum Computing Algorithms and Architecture",
+        "Quantum many-body systems"
+      ]
+    },
+    {
+      "id": "https://openalex.org/W4415150927",
+      "doi": "10.1038/s41586-026-10445-3",
+      "title": "Digital quantum magnetism on a trapped-ion quantum computer",
+      "authors": [
+        "Reza Haghshenas",
+        "Eli Chertkov",
+        "Michael James Mills",
+        "Wilhelm Kadow",
+        "S.-H. Lin",
+        "Yi‐Hsiang Chen",
+        "Chris Cade",
+        "Ido Niesen",
+        "Tomislav Begušić",
+        "Manuel S. Rudolph",
+        "Cristina Cîrstoiu",
+        "Kévin Hémery",
+        "Conor Mc Keever",
+        "Michael Lubasch",
+        "Etienne Granet",
+        "Charles H. Baldwin",
+        "John P. Bartolotta",
+        "Matthew J. Bohn",
+        "J. J. Burau",
+        "J. M. Cline",
+        "Matthew P. DeCross",
+        "Joan Dreiling",
+        "C. Foltz",
+        "David Francois",
+        "John Gaebler",
+        "C. N. Gilbreth",
+        "Johnnie Gray",
+        "Dan Gresh",
+        "A. Hall",
+        "Azure Hansen",
+        "A. Hansen",
+        "Nathan Hewitt",
+        "C. A. Holliman",
+        "Ross B. Hutson",
+        "Mohsin Iqbal",
+        "Nikhil Kotibhaskar",
+        "Elliot M Lehman",
+        "Dominic Lucchetti",
+        "Ivaylo S. Madjarov",
+        "K. Mayer",
+        "Alistair R. Milne",
+        "Steven A. Moses",
+        "Brian Neyenhuis",
+        "Gunhee Park",
+        "A. R. Perry",
+        "Boris Ponsioen",
+        "Michael Schecter",
+        "Peter Siegfried",
+        "David T. Stephen",
+        "Bruce G. Tiemann",
+        "Maxwell D. Urmey",
+        "J. Walker",
+        "Andrew C. Potter",
+        "David Hayes",
+        "Garnet Kin‐Lic Chan",
+        "Frank Pollmann",
+        "Michael Knap",
+        "Henrik Dreyer",
+        "Michael Foss‐Feig"
+      ],
+      "publication_date": "2026-04-29",
+      "year": 2026,
+      "type": "article",
+      "venue": "Nature",
+      "url": "https://doi.org/10.1038/s41586-026-10445-3",
+      "followed_authors": [
+        "garnet-chan"
+      ],
+      "topics": [
+        "Cold Atom Physics and Bose-Einstein Condensates",
+        "Quantum Computing Algorithms and Architecture",
+        "Quantum many-body systems"
+      ]
+    },
+    {
+      "id": "https://openalex.org/W7158361495",
+      "doi": "10.48550/arxiv.2604.25060",
+      "title": "Statistical mechanics in continuous space with tensor network methods",
+      "authors": [
+        "Gunhee Park",
+        "Tomislav Begušić",
+        "Si-Jing Du",
+        "Johnnie Gray",
+        "Garnet Kin‐Lic Chan"
+      ],
+      "publication_date": "2026-04-27",
+      "year": 2026,
+      "type": "preprint",
+      "venue": "arXiv (Cornell University)",
+      "url": "https://doi.org/10.48550/arxiv.2604.25060",
+      "followed_authors": [
+        "garnet-chan"
+      ],
+      "topics": [
+        "Quantum many-body systems",
+        "Statistical Mechanics and Entropy",
+        "Theoretical and Computational Physics"
+      ]
+    },
+    {
+      "id": "https://openalex.org/W7155496216",
+      "doi": "10.1021/acs.jctc.6c00347",
+      "title": "An Improved Size-Consistent Second-Order Brillouin–Wigner Perturbation Theory: Which Desirable Properties Are Compatible with Unconditional Size-Consistency and Optimized Chemical Accuracy?",
+      "authors": [
+        "Yao Shen",
+        "Zhenling Wang",
+        "Linus Bjarne Dittmer",
+        "Ainsley M. Clark",
+        "Kevin Carter-Fenk",
+        "Martin Head‐Gordon"
+      ],
+      "publication_date": "2026-04-24",
+      "year": 2026,
+      "type": "article",
+      "venue": "Journal of Chemical Theory and Computation",
+      "url": "https://doi.org/10.1021/acs.jctc.6c00347",
+      "followed_authors": [
+        "martin-head-gordon"
+      ],
+      "topics": [
+        "Advanced Chemical Physics Studies",
+        "Advanced Physical and Chemical Molecular Interactions",
+        "Atomic and Molecular Physics"
+      ]
+    },
+    {
+      "id": "https://openalex.org/W7154449812",
+      "doi": "10.1063/5.0324215",
+      "title": "Ab initio many-body quantum embedding and local correlation in crystalline materials using interpolative separable density fitting",
+      "authors": [
+        "Junjie Yang",
+        "Ning Zhang",
+        "Shunyue Yuan",
+        "Jincheng Yu",
+        "Hong‐Zhou Ye",
+        "Garnet Kin‐Lic Chan"
+      ],
+      "publication_date": "2026-04-15",
+      "year": 2026,
+      "type": "article",
+      "venue": "The Journal of Chemical Physics",
+      "url": "https://doi.org/10.1063/5.0324215",
+      "followed_authors": [
+        "garnet-chan"
+      ],
+      "topics": [
+        "Advanced Chemical Physics Studies",
+        "Physics of Superconductivity and Magnetism",
+        "Quantum many-body systems"
+      ]
+    },
+    {
+      "id": "https://openalex.org/W7149664378",
+      "doi": "10.1021/jacs.6c03064",
+      "title": "The Curious Case of Dual Emission in 9,10-Bis(phenylethynyl)anthracene",
+      "authors": [
+        "Jakub K. Sowa",
+        "Colette M. Sullivan",
+        "Leon Otis",
+        "Benjamin J. G. Rousseau",
+        "Jussi Isokuortti",
+        "James Shee",
+        "Peter J. Rossky",
+        "Lea Nienhaus"
+      ],
+      "publication_date": "2026-04-04",
+      "year": 2026,
+      "type": "article",
+      "venue": "Journal of the American Chemical Society",
+      "url": "https://doi.org/10.1021/jacs.6c03064",
+      "followed_authors": [
+        "james-shee"
+      ],
+      "topics": [
+        "Luminescence and Fluorescent Materials",
+        "Photochemistry and Electron Transfer Studies",
+        "Spectroscopy and Quantum Chemical Studies"
+      ]
+    },
+    {
+      "id": "https://openalex.org/W7140332837",
+      "doi": "10.48550/arxiv.2603.23466",
+      "title": "Reaching for the performance limit of hybrid density functional theory for molecular chemistry",
+      "authors": [
+        "Jiashu Liang",
+        "Martin Head‐Gordon"
+      ],
+      "publication_date": "2026-03-24",
+      "year": 2026,
+      "type": "preprint",
+      "venue": "arXiv (Cornell University)",
+      "url": "https://doi.org/10.48550/arxiv.2603.23466",
+      "followed_authors": [
+        "martin-head-gordon"
+      ],
+      "topics": [
+        "Advanced Chemical Physics Studies",
+        "Advanced Physical and Chemical Molecular Interactions",
+        "Chemical Reaction Mechanisms"
+      ]
+    },
+    {
+      "id": "https://openalex.org/W7139911887",
+      "doi": "10.1021/acs.jctc.5c01988",
+      "title": "An Algorithm for Atom-Centered Lossy Compression of the Atomic Orbital Basis in Density Functional Theory Calculations",
+      "authors": [
+        "Anthony Lara",
+        "Justin J. Talbot",
+        "Zhe Wang",
+        "Martin Head‐Gordon"
+      ],
+      "publication_date": "2026-03-20",
+      "year": 2026,
+      "type": "article",
+      "venue": "Journal of Chemical Theory and Computation",
+      "url": "https://doi.org/10.1021/acs.jctc.5c01988",
+      "followed_authors": [
+        "martin-head-gordon"
+      ],
+      "topics": [
+        "Advanced Chemical Physics Studies",
+        "Advanced Physical and Chemical Molecular Interactions",
+        "Atomic and Molecular Physics"
+      ]
+    },
+    {
+      "id": "https://openalex.org/W7133305404",
+      "doi": "10.1021/acs.jctc.5c01936",
+      "title": "Evaluating Multiconfigurational Trials for Accurate Phaseless Auxiliary-Field Quantum Monte Carlo on 3d Transition Metal Complexes",
+      "authors": [
+        "Hung Vuong",
+        "Ankit Mahajan",
+        "John L. Weber",
+        "James Shee",
+        "David R. Reichman",
+        "Richard A. Friesner"
+      ],
+      "publication_date": "2026-03-03",
+      "year": 2026,
+      "type": "article",
+      "venue": "Journal of Chemical Theory and Computation",
+      "url": "https://doi.org/10.1021/acs.jctc.5c01936",
+      "followed_authors": [
+        "james-shee"
+      ],
+      "topics": [
+        "Advanced Chemical Physics Studies",
+        "Atomic and Molecular Physics",
+        "Physics of Superconductivity and Magnetism"
+      ]
+    },
+    {
+      "id": "https://openalex.org/W7130708436",
+      "doi": "10.48550/arxiv.2602.17604",
+      "title": "Phase-sensitive representation of Majorana stabilizer states",
+      "authors": [
+        "Tomislav Begušić",
+        "Garnet Kin‐Lic Chan"
+      ],
+      "publication_date": "2026-02-19",
+      "year": 2026,
+      "type": "preprint",
+      "venue": "arXiv (Cornell University)",
+      "url": "https://doi.org/10.48550/arxiv.2602.17604",
+      "followed_authors": [
+        "garnet-chan"
+      ],
+      "topics": [
+        "Quantum Computing Algorithms and Architecture",
+        "Quantum many-body systems",
+        "Topological Materials and Phenomena"
+      ]
+    },
+    {
+      "id": "https://openalex.org/W4417350456",
+      "doi": "10.1103/qfkp-jc7s",
+      "title": "Coupled Lindblad Pseudomode Theory for Simulating Open Quantum Systems",
+      "authors": [
+        "Zhen Huang",
+        "Gunhee Park",
+        "Garnet Kin‐Lic Chan",
+        "Lin Lin"
+      ],
+      "publication_date": "2026-02-10",
+      "year": 2026,
+      "type": "article",
+      "venue": "Physical Review Letters",
+      "url": "https://doi.org/10.1103/qfkp-jc7s",
+      "followed_authors": [
+        "garnet-chan"
+      ],
+      "topics": [
+        "Quantum Computing Algorithms and Architecture",
+        "Quantum Mechanics and Applications",
+        "Quantum many-body systems"
+      ]
+    },
+    {
+      "id": "https://openalex.org/W4415087582",
+      "doi": "10.1073/pnas.2529120123",
+      "title": "Predictive free energy simulations through hierarchical distillation of quantum Hamiltonians",
+      "authors": [
+        "Chenghan Li",
+        "Garnet Kin‐Lic Chan"
+      ],
+      "publication_date": "2026-02-05",
+      "year": 2026,
+      "type": "article",
+      "venue": "Proceedings of the National Academy of Sciences",
+      "url": "https://doi.org/10.1073/pnas.2529120123",
+      "followed_authors": [
+        "garnet-chan"
+      ],
+      "topics": [
+        "Advanced Chemical Physics Studies",
+        "Computational Drug Discovery Methods",
+        "Machine Learning in Materials Science"
+      ]
+    },
+    {
+      "id": "https://openalex.org/W4414936064",
+      "doi": "10.1103/2t2k-3ftx",
+      "title": "Observing Spatial Charge and Spin Correlations in a Strongly Interacting Fermi Gas",
+      "authors": [
+        "Cyprien Daix",
+        "Maxime Dixmerias",
+        "Yuan-Yao He",
+        "Joris Verstraten",
+        "Tim de Jongh",
+        "Bruno Peaudecerf",
+        "Shiwei Zhang",
+        "Tarik Yefsah"
+      ],
+      "publication_date": "2026-01-26",
+      "year": 2026,
+      "type": "article",
+      "venue": "Physical Review Letters",
+      "url": "https://doi.org/10.1103/2t2k-3ftx",
+      "followed_authors": [
+        "shiwei-zhang"
+      ],
+      "topics": [
+        "Cold Atom Physics and Bose-Einstein Condensates",
+        "Quantum many-body systems",
+        "Quantum, superfluid, helium dynamics"
+      ]
+    },
+    {
+      "id": "https://openalex.org/W4417136725",
+      "doi": "10.1103/x8vl-qf14",
+      "title": "Neuralized fermionic tensor networks for quantum many-body systems",
+      "authors": [
+        "Si-Jing Du",
+        "Ao Chen",
+        "Garnet Kin‐Lic Chan"
+      ],
+      "publication_date": "2026-01-22",
+      "year": 2026,
+      "type": "article",
+      "venue": "Physical review. B./Physical review. B",
+      "url": "https://doi.org/10.1103/x8vl-qf14",
+      "followed_authors": [
+        "garnet-chan"
+      ],
+      "topics": [
+        "Cold Atom Physics and Bose-Einstein Condensates",
+        "Quantum Computing Algorithms and Architecture",
+        "Quantum many-body systems"
+      ]
+    },
+    {
+      "id": "https://openalex.org/W4403555688",
+      "doi": "10.1103/vqks-cr6x",
+      "title": "Loop series expansions for tensor networks",
+      "authors": [
+        "Glen Evenbly",
+        "Nicola Pancotti",
+        "Ashley Milsted",
+        "Johnnie Gray",
+        "Garnet Kin‐Lic Chan"
+      ],
+      "publication_date": "2026-01-13",
+      "year": 2026,
+      "type": "article",
+      "venue": "Physical Review Research",
+      "url": "https://doi.org/10.1103/vqks-cr6x",
+      "followed_authors": [
+        "garnet-chan"
+      ],
+      "topics": [
+        "Quantum Computing Algorithms and Architecture",
+        "Quantum many-body systems",
+        "Tensor decomposition and applications"
+      ]
+    },
+    {
+      "id": "https://openalex.org/W7120188269",
+      "doi": "10.48550/arxiv.2601.04621",
+      "title": "Classical computational simulation of the FeMo-cofactor model to chemical accuracy and its implications",
+      "authors": [
+        "Huanchen Zhai",
+        "Chenghan Li",
+        "Xing Zhang",
+        "Zhendong Li",
+        "Seunghoon Lee",
+        "Garnet Kin‐Lic Chan"
+      ],
+      "publication_date": "2026-01-08",
+      "year": 2026,
+      "type": "preprint",
+      "venue": "arXiv (Cornell University)",
+      "url": "https://doi.org/10.48550/arxiv.2601.04621",
+      "followed_authors": [
+        "garnet-chan"
+      ],
+      "topics": [
+        "Advanced Chemical Physics Studies",
+        "Metalloenzymes and iron-sulfur proteins",
+        "Quantum many-body systems"
+      ]
+    },
+    {
+      "id": "https://openalex.org/W4414991368",
+      "doi": "10.1103/xknq-czll",
+      "title": "Engineering Hubbard models with gated two-dimensional moiré systems",
+      "authors": [
+        "Yiqi Yang",
+        "Yubo Yang",
+        "Miguel A. Morales",
+        "Shiwei Zhang"
+      ],
+      "publication_date": "2026-01-07",
+      "year": 2026,
+      "type": "article",
+      "venue": "Physical review. B./Physical review. B",
+      "url": "https://doi.org/10.1103/xknq-czll",
+      "followed_authors": [
+        "shiwei-zhang"
+      ],
+      "topics": [
+        "Physics of Superconductivity and Magnetism",
+        "Quantum and electron transport phenomena",
+        "Quantum many-body systems"
+      ]
+    },
+    {
+      "id": "https://openalex.org/W7202077881",
+      "doi": "10.1039/d6cp01626j",
+      "title": "Using energy decomposition analysis from correlated wavefunction theory to characterize a range of hydrogen, halogen, and tetrel bonds: the relative importance of electrostatics, charge-transfer and polarization",
+      "authors": [
+        "Hengyuan Shen",
+        "Zhenling Wang",
+        "Kevin Ikeda",
+        "Dong Jun Shin",
+        "Matthias Loipersberger",
+        "Alexander Zech",
+        "Stefan M. Huber",
+        "Teresa L. Head-Gordon",
+        "Martin Head‐Gordon"
+      ],
+      "publication_date": "2026-01-01",
+      "year": 2026,
+      "type": "article",
+      "venue": "Physical Chemistry Chemical Physics",
+      "url": "https://doi.org/10.1039/d6cp01626j",
+      "followed_authors": [
+        "martin-head-gordon"
+      ],
+      "topics": [
+        "Advanced Chemical Physics Studies",
+        "Advanced Physical and Chemical Molecular Interactions",
+        "Crystallography and molecular interactions"
+      ]
+    },
+    {
+      "id": "https://openalex.org/W4415064788",
+      "doi": "10.1103/7c5b-3v56",
+      "title": "Error-mitigated nonorthogonal quantum eigensolver via shadow tomography",
+      "authors": [
+        "Hang Ren",
+        "Yipei Zhang",
+        "W.M. Billings",
+        "Rebecca Tomann",
+        "Nikolay V. Tkachenko",
+        "Mingyu Kang",
+        "Martin Head‐Gordon",
+        "K. Birgitta Whaley"
+      ],
+      "publication_date": "2025-12-30",
+      "year": 2025,
+      "type": "article",
+      "venue": "Physical Review Research",
+      "url": "https://doi.org/10.1103/7c5b-3v56",
+      "followed_authors": [
+        "martin-head-gordon"
+      ],
+      "topics": [
+        "Advanced Chemical Physics Studies",
+        "Quantum Computing Algorithms and Architecture",
+        "Quantum many-body systems"
+      ]
+    },
+    {
+      "id": "https://openalex.org/W7117133318",
+      "doi": "10.1021/acs.jctc.5c01738",
+      "title": "An Energy Decomposition Method for Electronic Excitations in Two-Determinant Restricted Open-Shell Kohn–Sham Theory",
+      "authors": [
+        "Haobo Ling",
+        "Hengyuan Shen",
+        "Zeyi Zhang",
+        "Martin Head‐Gordon"
+      ],
+      "publication_date": "2025-12-23",
+      "year": 2025,
+      "type": "article",
+      "venue": "Journal of Chemical Theory and Computation",
+      "url": "https://doi.org/10.1021/acs.jctc.5c01738",
+      "followed_authors": [
+        "martin-head-gordon"
+      ],
+      "topics": [
+        "Advanced Chemical Physics Studies",
+        "Photochemistry and Electron Transfer Studies",
+        "Spectroscopy and Quantum Chemical Studies"
+      ]
+    },
+    {
+      "id": "https://openalex.org/W4417364842",
+      "doi": "10.1021/acs.jctc.5c01477",
+      "title": "Noncovalent Interaction Energies with Phaseless Auxiliary-Field Quantum Monte Carlo",
+      "authors": [
+        "Devesh Awasthi",
+        "Leon Otis",
+        "Emily Huang",
+        "James Shee"
+      ],
+      "publication_date": "2025-12-16",
+      "year": 2025,
+      "type": "article",
+      "venue": "Journal of Chemical Theory and Computation",
+      "url": "https://doi.org/10.1021/acs.jctc.5c01477",
+      "followed_authors": [
+        "james-shee"
+      ],
+      "topics": [
+        "Advanced Chemical Physics Studies",
+        "Advanced Physical and Chemical Molecular Interactions",
+        "Crystallography and molecular interactions"
+      ]
+    },
+    {
+      "id": "https://openalex.org/W4417447113",
+      "doi": "10.48550/arxiv.2512.12010",
+      "title": "Convergence of the Cumulant Expansion and Polynomial-Time Algorithm for Weakly Interacting Fermions",
+      "authors": [
+        "Hongrui Chen",
+        "Cambyse Rouzé",
+        "Jielun Chen",
+        "Jiang, Jiaqing",
+        "Samuel O. Scalet",
+        "Zhan, Yongtao",
+        "Garnet Kin‐Lic Chan",
+        "Lexing Ying B",
+        "Yu Tong"
+      ],
+      "publication_date": "2025-12-12",
+      "year": 2025,
+      "type": "preprint",
+      "venue": "arXiv (Cornell University)",
+      "url": "https://doi.org/10.48550/arxiv.2512.12010",
+      "followed_authors": [
+        "garnet-chan"
+      ],
+      "topics": [
+        "Physics of Superconductivity and Magnetism",
+        "Quantum many-body systems",
+        "Theoretical and Computational Physics"
+      ]
+    },
+    {
+      "id": "https://openalex.org/W4417297096",
+      "doi": "10.48550/arxiv.2512.10910",
+      "title": "Partitioned Expansions for Approximate Tensor Network Contractions",
+      "authors": [
+        "Glen Evenbly",
+        "Johnnie Gray",
+        "Garnet Kin‐Lic Chan"
+      ],
+      "publication_date": "2025-12-11",
+      "year": 2025,
+      "type": "preprint",
+      "venue": "arXiv (Cornell University)",
+      "url": "https://doi.org/10.48550/arxiv.2512.10910",
+      "followed_authors": [
+        "garnet-chan"
+      ],
+      "topics": [
+        "Quantum Computing Algorithms and Architecture",
+        "Quantum many-body systems",
+        "Tensor decomposition and applications"
+      ]
+    },
+    {
+      "id": "https://openalex.org/W4415237767",
+      "doi": "10.1103/r7c3-zq4b",
+      "title": "First- and quasi-second-order optimization algorithms in variational Monte Carlo",
+      "authors": [
+        "Ruojing Peng",
+        "Garnet Kin‐Lic Chan"
+      ],
+      "publication_date": "2025-12-07",
+      "year": 2025,
+      "type": "article",
+      "venue": "Physical Review Research",
+      "url": "https://doi.org/10.1103/r7c3-zq4b",
+      "followed_authors": [
+        "garnet-chan"
+      ],
+      "topics": [
+        "Physics of Superconductivity and Magnetism",
+        "Quantum Computing Algorithms and Architecture",
+        "Quantum many-body systems"
+      ]
+    },
+    {
+      "id": "https://openalex.org/W4417261749",
+      "doi": "10.1103/s4zw-qt8f",
+      "title": "Addressing the infinite variance problem in fermionic Monte Carlo simulations: Retrospective error remediation and the exact bridge link method",
+      "authors": [
+        "Zhou‐Quan Wan",
+        "Shiwei Zhang"
+      ],
+      "publication_date": "2025-11-24",
+      "year": 2025,
+      "type": "article",
+      "venue": "Physical review. E",
+      "url": "https://doi.org/10.1103/s4zw-qt8f",
+      "followed_authors": [
+        "shiwei-zhang"
+      ],
+      "topics": [
+        "Physics of Superconductivity and Magnetism",
+        "Quantum many-body systems",
+        "Theoretical and Computational Physics"
+      ]
+    },
+    {
+      "id": "https://openalex.org/W4416582494",
+      "doi": "10.1021/jacs.5c12699",
+      "title": "Structural Evidence of Interanionic Hydrogen Bonding in Phosphoric Acid Solutions",
+      "authors": [
+        "Pyeongeun Kim",
+        "Richard Kang",
+        "Kevin Carter-Fenk",
+        "Kevin R. Wilson",
+        "Martin Head‐Gordon",
+        "Musahid Ahmed"
+      ],
+      "publication_date": "2025-11-24",
+      "year": 2025,
+      "type": "article",
+      "venue": "Journal of the American Chemical Society",
+      "url": "https://doi.org/10.1021/jacs.5c12699",
+      "followed_authors": [
+        "martin-head-gordon"
+      ],
+      "topics": [
+        "Crystallography and molecular interactions",
+        "Spectroscopy and Quantum Chemical Studies",
+        "X-ray Spectroscopy and Fluorescence Analysis"
+      ]
+    },
+    {
+      "id": "https://openalex.org/W4416674669",
+      "doi": "10.1021/acs.jctc.5c01038",
+      "title": "A Perspective on Quantum Computing Applications in Quantum Chemistry Using 25–100 Logical Qubits",
+      "authors": [
+        "Yuri Alexeev",
+        "Víctor S. Batista",
+        "Nicholas P. Bauman",
+        "Luke W. Bertels",
+        "Daniel Claudino",
+        "Rishab Dutta",
+        "Laura Gagliardi",
+        "Scott Godwin",
+        "Niranjan Govind",
+        "Martin Head‐Gordon",
+        "Matthew R. Hermes",
+        "Karol Kowalski",
+        "Ang Li",
+        "Chenxu Liu",
+        "Junyu Liu",
+        "Ping Liu",
+        "Juan María García-Lastra",
+        "Daniel Mejı́a-Rodrı́guez",
+        "Karl Todd Mueller",
+        "Matthew Otten",
+        "Bo Peng",
+        "Mark Raugas",
+        "Markus Reiher",
+        "Paul Rigor",
+        "Wendy J. Shaw",
+        "Mark van Schilfgaarde",
+        "Tejs Vegge",
+        "Yu Zhang",
+        "Muqing Zheng",
+        "Linghua Zhu"
+      ],
+      "publication_date": "2025-11-11",
+      "year": 2025,
+      "type": "article",
+      "venue": "Journal of Chemical Theory and Computation",
+      "url": "https://doi.org/10.1021/acs.jctc.5c01038",
+      "followed_authors": [
+        "martin-head-gordon"
+      ],
+      "topics": [
+        "Advanced Chemical Physics Studies",
+        "Quantum Computing Algorithms and Architecture",
+        "Quantum many-body systems"
+      ]
+    },
+    {
+      "id": "https://openalex.org/W4415830638",
+      "doi": "10.1021/acs.jctc.5c01407",
+      "title": "Enhancing the Accuracy and Efficiency of Sample-Based Quantum Diagonalization with Phaseless Auxiliary-Field Quantum Monte Carlo",
+      "authors": [
+        "Don Danilov",
+        "Javier Robledo Moreno",
+        "Kevin J. Sung",
+        "Mário Motta",
+        "James Shee"
+      ],
+      "publication_date": "2025-11-03",
+      "year": 2025,
+      "type": "article",
+      "venue": "Journal of Chemical Theory and Computation",
+      "url": "https://doi.org/10.1021/acs.jctc.5c01407",
+      "followed_authors": [
+        "james-shee"
+      ],
+      "topics": [
+        "Advanced Chemical Physics Studies",
+        "Quantum Computing Algorithms and Architecture",
+        "Quantum many-body systems"
+      ]
+    },
+    {
+      "id": "https://openalex.org/W4415566351",
+      "doi": "10.1021/acs.jctc.5c01358",
+      "title": "More Numerical Precision for Less Compute Cost: Optimizing a Local Correlation Algorithm for Second Order Møller–Plesset Theory and Comparing against Pair Natural Orbital Methods",
+      "authors": [
+        "Zhenling Wang",
+        "Haobo Ling",
+        "Tianyi Shi",
+        "Yao Shen",
+        "Zhe Wang",
+        "Yang Liu",
+        "Xiaoye Sherry Li",
+        "Martin Head‐Gordon"
+      ],
+      "publication_date": "2025-10-27",
+      "year": 2025,
+      "type": "article",
+      "venue": "Journal of Chemical Theory and Computation",
+      "url": "https://doi.org/10.1021/acs.jctc.5c01358",
+      "followed_authors": [
+        "martin-head-gordon"
+      ],
+      "topics": [
+        "Advanced Chemical Physics Studies",
+        "Advanced Physical and Chemical Molecular Interactions",
+        "Parallel Computing and Optimization Techniques"
+      ]
+    },
+    {
+      "id": "https://openalex.org/W4415532948",
+      "doi": "10.1021/acs.jpclett.5c02964",
+      "title": "A Scalable Route to First-Order Response Properties with Correlated Sampling Phaseless Auxiliary-Field Quantum Monte Carlo",
+      "authors": [
+        "Leon Otis",
+        "Saisrinivas Gudivada",
+        "Marvin Friede",
+        "James Shee"
+      ],
+      "publication_date": "2025-10-24",
+      "year": 2025,
+      "type": "article",
+      "venue": "The Journal of Physical Chemistry Letters",
+      "url": "https://doi.org/10.1021/acs.jpclett.5c02964",
+      "followed_authors": [
+        "james-shee"
+      ],
+      "topics": [
+        "Advanced Chemical Physics Studies",
+        "Physics of Superconductivity and Magnetism",
+        "Quantum many-body systems"
+      ]
+    },
+    {
+      "id": "https://openalex.org/W4415424927",
+      "doi": "10.1063/5.0296390",
+      "title": "Implementing advanced trial wave functions in fermion quantum Monte Carlo via stochastic sampling",
+      "authors": [
+        "Zhi-Yu Xiao",
+        "Tao Xiang",
+        "Zixiang Lu",
+        "Yixiao Chen",
+        "Shiwei Zhang"
+      ],
+      "publication_date": "2025-10-22",
+      "year": 2025,
+      "type": "article",
+      "venue": "The Journal of Chemical Physics",
+      "url": "https://doi.org/10.1063/5.0296390",
+      "followed_authors": [
+        "shiwei-zhang"
+      ],
+      "topics": [
+        "Advanced Chemical Physics Studies",
+        "Quantum Computing Algorithms and Architecture",
+        "Quantum many-body systems"
+      ]
+    },
+    {
+      "id": "https://openalex.org/W4415315365",
+      "doi": "10.48550/arxiv.2510.06486",
+      "title": "Systematic improvement of trial states in phaseless auxiliary-field quantum Monte Carlo",
+      "authors": [
+        "Eirik F. Kjønstad",
+        "Yann Damour",
+        "Sandeep Sharma",
+        "Garnet Kin‐Lic Chan"
+      ],
+      "publication_date": "2025-10-07",
+      "year": 2025,
+      "type": "preprint",
+      "venue": "arXiv (Cornell University)",
+      "url": "https://doi.org/10.48550/arxiv.2510.06486",
+      "followed_authors": [
+        "garnet-chan"
+      ],
+      "topics": [
+        "Advanced Chemical Physics Studies",
+        "Physics of Superconductivity and Magnetism",
+        "Quantum many-body systems"
+      ]
+    },
+    {
+      "id": "https://openalex.org/W4414423754",
+      "doi": "10.1063/5.0286872",
+      "title": "The approximate second order coupled-cluster method based on a size-consistent Brillouin–Wigner partitioning",
+      "authors": [
+        "Linus Bjarne Dittmer",
+        "Nikolay V. Tkachenko",
+        "Martin Head‐Gordon"
+      ],
+      "publication_date": "2025-09-23",
+      "year": 2025,
+      "type": "article",
+      "venue": "The Journal of Chemical Physics",
+      "url": "https://doi.org/10.1063/5.0286872",
+      "followed_authors": [
+        "martin-head-gordon"
+      ],
+      "topics": [
+        "Advanced Chemical Physics Studies",
+        "Advanced Physical and Chemical Molecular Interactions",
+        "Atomic and Molecular Physics"
+      ]
+    },
+    {
+      "id": "https://openalex.org/W4415297291",
+      "doi": "10.1103/2qgp-v27h",
+      "title": "Critical Gate Distance for Wigner Crystallization in the Two-Dimensional Electron Gas",
+      "authors": [
+        "Agnes Valenti",
+        "Vladimir Calvera",
+        "Yubo Yang",
+        "Miguel A. Morales",
+        "Steven Allan Kivelson",
+        "Ilya Esterlis",
+        "Shiwei Zhang"
+      ],
+      "publication_date": "2025-09-22",
+      "year": 2025,
+      "type": "article",
+      "venue": "Physical Review Letters",
+      "url": "https://doi.org/10.1103/2qgp-v27h",
+      "followed_authors": [
+        "shiwei-zhang"
+      ],
+      "topics": [
+        "Quantum and electron transport phenomena",
+        "Quantum chaos and dynamical systems",
+        "Semiconductor Quantum Structures and Devices"
+      ]
+    },
+    {
+      "id": "https://openalex.org/W4414168405",
+      "doi": "10.1021/acs.jctc.5c01029",
+      "title": "Understanding Electronic Excitations Between Single Determinants with Occupied-Virtual Orbitals for Chemical Valence",
+      "authors": [
+        "Hengyuan Shen",
+        "Nicola Bogo",
+        "Christopher Johannes Stein",
+        "Martin Head‐Gordon"
+      ],
+      "publication_date": "2025-09-15",
+      "year": 2025,
+      "type": "article",
+      "venue": "Journal of Chemical Theory and Computation",
+      "url": "https://doi.org/10.1021/acs.jctc.5c01029",
+      "followed_authors": [
+        "martin-head-gordon"
+      ],
+      "topics": [
+        "Advanced Chemical Physics Studies",
+        "Photochemistry and Electron Transfer Studies",
+        "Spectroscopy and Quantum Chemical Studies"
+      ]
+    },
+    {
+      "id": "https://openalex.org/W4414162348",
+      "doi": "10.1002/anie.202508145",
+      "title": "Can Charge Transfer Across C─H⋅⋅⋅O Hydrogen Bonds Stabilize Oil Droplets in Water?",
+      "authors": [
+        "Ruoqi Zhao",
+        "Hengyuan Shen",
+        "R. Allen LaCour",
+        "Joseph P. Heindel",
+        "Martin Head‐Gordon",
+        "Teresa L. Head-Gordon"
+      ],
+      "publication_date": "2025-09-13",
+      "year": 2025,
+      "type": "article",
+      "venue": "Angewandte Chemie International Edition",
+      "url": "https://doi.org/10.1002/anie.202508145",
+      "followed_authors": [
+        "martin-head-gordon"
+      ],
+      "topics": [
+        "Pickering emulsions and particle stabilization",
+        "Spectroscopy and Quantum Chemical Studies",
+        "Surfactants and Colloidal Systems"
+      ]
+    },
+    {
+      "id": "https://openalex.org/W4414003291",
+      "doi": "10.1021/acs.jctc.5c01066",
+      "title": "Optimized Auxiliary Functions for Robust Mitigation of Finite-Size Errors in Periodic Hybrid Density Functional Theory",
+      "authors": [
+        "Stephen Jon Quiton",
+        "Juan D. F. Pottecher",
+        "Xin Xing",
+        "Martin Head‐Gordon",
+        "Lin Lin"
+      ],
+      "publication_date": "2025-09-04",
+      "year": 2025,
+      "type": "article",
+      "venue": "Journal of Chemical Theory and Computation",
+      "url": "https://doi.org/10.1021/acs.jctc.5c01066",
+      "followed_authors": [
+        "martin-head-gordon"
+      ],
+      "topics": [
+        "Advanced Chemical Physics Studies",
+        "Advanced Physical and Chemical Molecular Interactions",
+        "Machine Learning in Materials Science"
+      ]
+    },
+    {
+      "id": "https://openalex.org/W4414269865",
+      "doi": "10.1103/lq1y-q74h",
+      "title": "Light-Matter Correlation Energy Functional of the Cavity-Coupled Two-Dimensional Electron Gas via Quantum Monte Carlo Simulations",
+      "authors": [
+        "Lukas Weber",
+        "Miguel A. Morales",
+        "Johannes Flick",
+        "Shiwei Zhang",
+        "Ángel Rubio"
+      ],
+      "publication_date": "2025-08-28",
+      "year": 2025,
+      "type": "article",
+      "venue": "Physical Review Letters",
+      "url": "https://doi.org/10.1103/lq1y-q74h",
+      "followed_authors": [
+        "shiwei-zhang"
+      ],
+      "topics": [
+        "Plasmonic and Surface Plasmon Research",
+        "Semiconductor Quantum Structures and Devices",
+        "Strong Light-Matter Interactions"
+      ]
+    },
+    {
+      "id": "https://openalex.org/W4413644181",
+      "doi": "10.1021/acs.jctc.5c00809",
+      "title": "Extending Orbital-Optimized Density Functional Theory to L-Edge XPS and Beyond: Spin–Orbit Coupling via Nonorthogonal Quasi-Degenerate Perturbation Theory",
+      "authors": [
+        "Richard Kang",
+        "Leonardo A. Cunha",
+        "Diptarka Hait",
+        "Martin Head‐Gordon"
+      ],
+      "publication_date": "2025-08-26",
+      "year": 2025,
+      "type": "article",
+      "venue": "Journal of Chemical Theory and Computation",
+      "url": "https://doi.org/10.1021/acs.jctc.5c00809",
+      "followed_authors": [
+        "martin-head-gordon"
+      ],
+      "topics": [
+        "Advanced Chemical Physics Studies",
+        "Atomic and Molecular Physics",
+        "X-ray Spectroscopy and Fluorescence Analysis"
+      ]
+    },
+    {
+      "id": "https://openalex.org/W4414490941",
+      "doi": "10.1103/vyvq-chlt",
+      "title": "Towards excitations and dynamical quantities in correlated lattices with density matrix embedding theory",
+      "authors": [
+        "Shuoxue Li",
+        "Chenghan Li",
+        "Huanchen Zhai",
+        "Garnet Kin‐Lic Chan"
+      ],
+      "publication_date": "2025-08-21",
+      "year": 2025,
+      "type": "article",
+      "venue": "Physical review. B./Physical review. B",
+      "url": "https://doi.org/10.1103/vyvq-chlt",
+      "followed_authors": [
+        "garnet-chan"
+      ],
+      "topics": [
+        "Advanced Chemical Physics Studies",
+        "Physics of Superconductivity and Magnetism",
+        "Quantum many-body systems"
+      ]
+    },
+    {
+      "id": "https://openalex.org/W4413398930",
+      "doi": "10.26434/chemrxiv-2025-7bwnx",
+      "title": "X-ray Thermometry Reveals that Glycerol Aerosols Spontaneously form Glasses",
+      "authors": [
+        "Kevin Carter-Fenk",
+        "Slavomír Nemšák",
+        "Sorren Warkander",
+        "Musahid Ahmed",
+        "Martin Head‐Gordon"
+      ],
+      "publication_date": "2025-08-21",
+      "year": 2025,
+      "type": "preprint",
+      "venue": "ChemRxiv",
+      "url": "https://doi.org/10.26434/chemrxiv-2025-7bwnx",
+      "followed_authors": [
+        "martin-head-gordon"
+      ],
+      "topics": [
+        "Atmospheric chemistry and aerosols",
+        "Spectroscopy and Quantum Chemical Studies",
+        "X-ray Spectroscopy and Fluorescence Analysis"
+      ]
+    },
+    {
+      "id": "https://openalex.org/W4413041971",
+      "doi": "10.1103/8dnp-w7c6",
+      "title": "Single-particle dispersion and density of states of the half-filled two-dimensional Hubbard model",
+      "authors": [
+        "Gabe Schumm",
+        "Shiwei Zhang",
+        "Anders W. Sandvik"
+      ],
+      "publication_date": "2025-07-29",
+      "year": 2025,
+      "type": "article",
+      "venue": "Physical review. B./Physical review. B",
+      "url": "https://doi.org/10.1103/8dnp-w7c6",
+      "followed_authors": [
+        "shiwei-zhang"
+      ],
+      "topics": [
+        "Cold Atom Physics and Bose-Einstein Condensates",
+        "Physics of Superconductivity and Magnetism",
+        "Quantum many-body systems"
+      ]
+    },
+    {
+      "id": "https://openalex.org/W4412091071",
+      "doi": "10.1063/5.0273952",
+      "title": "Quantum many-body linear algebra, Hamiltonian moments, and a coupled-cluster inspired framework",
+      "authors": [
+        "Yuhang Ai",
+        "Huanchen Zhai",
+        "Johannes Tölle",
+        "Garnet Kin‐Lic Chan"
+      ],
+      "publication_date": "2025-07-07",
+      "year": 2025,
+      "type": "article",
+      "venue": "The Journal of Chemical Physics",
+      "url": "https://doi.org/10.1063/5.0273952",
+      "followed_authors": [
+        "garnet-chan"
+      ],
+      "topics": [
+        "Advanced Chemical Physics Studies",
+        "Quantum Computing Algorithms and Architecture",
+        "Quantum many-body systems"
+      ]
+    },
+    {
+      "id": "https://openalex.org/W4411700142",
+      "doi": "10.1021/jacs.5c07796",
+      "title": "A 54.6 GHz Clock Transition in Ho3+ Electron Spin Qubits Assembled into a Metal–Organic Framework",
+      "authors": [
+        "Miguel Gakiya-Teruya",
+        "Robert Stewart",
+        "Linqing Peng",
+        "Shuanglong Liu",
+        "Chenghan Li",
+        "Hai‐Ping Cheng",
+        "Garnet Kin‐Lic Chan",
+        "Stephen Hill",
+        "Michael Shatruk"
+      ],
+      "publication_date": "2025-06-26",
+      "year": 2025,
+      "type": "article",
+      "venue": "Journal of the American Chemical Society",
+      "url": "https://doi.org/10.1021/jacs.5c07796",
+      "followed_authors": [
+        "garnet-chan"
+      ],
+      "topics": [
+        "Electron Spin Resonance Studies",
+        "Lanthanide and Transition Metal Complexes",
+        "Magnetism in coordination complexes"
+      ]
+    },
+    {
+      "id": "https://openalex.org/W4411655759",
+      "doi": "10.1021/acs.jctc.5c00522",
+      "title": "Exploring the Design Space of Machine Learning Models for Quantum Chemistry with a Fully Differentiable Framework",
+      "authors": [
+        "Divya Suman",
+        "Jigyasa Nigam",
+        "Sandra Saade",
+        "Paolo Pegolo",
+        "Hanna Türk",
+        "Xing Zhang",
+        "Garnet Kin‐Lic Chan",
+        "Michele Ceriotti"
+      ],
+      "publication_date": "2025-06-25",
+      "year": 2025,
+      "type": "article",
+      "venue": "Journal of Chemical Theory and Computation",
+      "url": "https://doi.org/10.1021/acs.jctc.5c00522",
+      "followed_authors": [
+        "garnet-chan"
+      ],
+      "topics": [
+        "Advanced Chemical Physics Studies",
+        "Computational Drug Discovery Methods",
+        "Machine Learning in Materials Science"
+      ]
+    },
+    {
+      "id": "https://openalex.org/W4411466885",
+      "doi": "10.1021/acs.jctc.5c00682",
+      "title": "General Quantum Alchemical Free Energy Simulations via Hamiltonian Interpolation",
+      "authors": [
+        "Chenghan Li",
+        "Xing Zhang",
+        "Garnet Kin‐Lic Chan"
+      ],
+      "publication_date": "2025-06-20",
+      "year": 2025,
+      "type": "article",
+      "venue": "Journal of Chemical Theory and Computation",
+      "url": "https://doi.org/10.1021/acs.jctc.5c00682",
+      "followed_authors": [
+        "garnet-chan"
+      ],
+      "topics": [
+        "Advanced Chemical Physics Studies",
+        "Advanced Physical and Chemical Molecular Interactions",
+        "Computational Drug Discovery Methods"
+      ]
+    },
+    {
+      "id": "https://openalex.org/W4411208794",
+      "doi": "10.1038/s41586-025-09112-w",
+      "title": "A neutral-atom Hubbard quantum simulator in the cryogenic regime",
+      "authors": [
+        "Muqing Xu",
+        "Lev Haldar Kendrick",
+        "Anant Kale",
+        "Youqi Gang",
+        "Chunhan Feng",
+        "Shiwei Zhang",
+        "Aaron W. Young",
+        "Martin Lebrat",
+        "Markus Greiner"
+      ],
+      "publication_date": "2025-06-11",
+      "year": 2025,
+      "type": "article",
+      "venue": "Nature",
+      "url": "https://doi.org/10.1038/s41586-025-09112-w",
+      "followed_authors": [
+        "shiwei-zhang"
+      ],
+      "topics": [
+        "Cold Atom Physics and Bose-Einstein Condensates",
+        "Physics of Superconductivity and Magnetism",
+        "Quantum many-body systems"
+      ]
+    },
+    {
+      "id": "https://openalex.org/W4407764274",
+      "doi": "10.1103/r4q9-4yvj",
+      "title": "Accurate Simulation of the Hubbard Model with Finite Fermionic Projected Entangled Pair States",
+      "authors": [
+        "Wen-Yuan Liu",
+        "Huanchen Zhai",
+        "Ruojing Peng",
+        "Zheng‐Cheng Gu",
+        "Garnet Kin‐Lic Chan"
+      ],
+      "publication_date": "2025-06-03",
+      "year": 2025,
+      "type": "article",
+      "venue": "Physical Review Letters",
+      "url": "https://doi.org/10.1103/r4q9-4yvj",
+      "followed_authors": [
+        "garnet-chan"
+      ],
+      "topics": [
+        "Cold Atom Physics and Bose-Einstein Condensates",
+        "Physics of Superconductivity and Magnetism",
+        "Quantum many-body systems"
+      ]
+    },
+    {
+      "id": "https://openalex.org/W4403882565",
+      "doi": "10.1103/physrevresearch.7.023193",
+      "title": "Fermionic tensor network contraction for arbitrary geometries",
+      "authors": [
+        "Yang Gao",
+        "Huanchen Zhai",
+        "Johnnie Gray",
+        "Ruojing Peng",
+        "Gunhee Park",
+        "Wen-Yuan Liu",
+        "Eirik F. Kjønstad",
+        "Garnet Kin‐Lic Chan"
+      ],
+      "publication_date": "2025-05-27",
+      "year": 2025,
+      "type": "article",
+      "venue": "Physical Review Research",
+      "url": "https://doi.org/10.1103/physrevresearch.7.023193",
+      "followed_authors": [
+        "garnet-chan"
+      ],
+      "topics": [
+        "Cold Atom Physics and Bose-Einstein Condensates",
+        "Quantum Computing Algorithms and Architecture",
+        "Quantum many-body systems"
+      ]
+    },
+    {
+      "id": "https://openalex.org/W4410192047",
+      "doi": "10.1103/prxquantum.6.020327",
+      "title": "Rapid Initial-State Preparation for the Quantum Simulation of Strongly Correlated Molecules",
+      "authors": [
+        "Dominic William Berry",
+        "Yu Tong",
+        "Tanuj Khattar",
+        "Alec F. White",
+        "Tae In Kim",
+        "Guang Hao Low",
+        "Sergio Boixo",
+        "Zhiyan Ding",
+        "Lin Lin",
+        "Seunghoon Lee",
+        "Garnet Kin‐Lic Chan",
+        "Ryan Babbush",
+        "Nicholas C. Rubin"
+      ],
+      "publication_date": "2025-05-08",
+      "year": 2025,
+      "type": "article",
+      "venue": "PRX Quantum",
+      "url": "https://doi.org/10.1103/prxquantum.6.020327",
+      "followed_authors": [
+        "garnet-chan"
+      ],
+      "topics": [
+        "Advanced Chemical Physics Studies",
+        "Quantum Computing Algorithms and Architecture",
+        "Quantum many-body systems"
+      ]
+    },
+    {
+      "id": "https://openalex.org/W4409689548",
+      "doi": "10.1080/00268976.2025.2489096",
+      "title": "Coupled-cluster pairing models for radicals with strong correlations",
+      "authors": [
+        "Susi Lehtola",
+        "Martin Head‐Gordon"
+      ],
+      "publication_date": "2025-04-21",
+      "year": 2025,
+      "type": "article",
+      "venue": "Molecular Physics",
+      "url": "https://doi.org/10.1080/00268976.2025.2489096",
+      "followed_authors": [
+        "martin-head-gordon"
+      ],
+      "topics": [
+        "Advanced Chemical Physics Studies",
+        "Advanced Physical and Chemical Molecular Interactions",
+        "Physics of Superconductivity and Magnetism"
+      ]
+    },
+    {
+      "id": "https://openalex.org/W4409446112",
+      "doi": "10.1063/5.0269149",
+      "title": "Simulating quantum circuit expectation values by Clifford perturbation theory",
+      "authors": [
+        "Tomislav Begušić",
+        "Kasra Hejazi",
+        "Garnet Kin‐Lic Chan"
+      ],
+      "publication_date": "2025-04-15",
+      "year": 2025,
+      "type": "article",
+      "venue": "The Journal of Chemical Physics",
+      "url": "https://doi.org/10.1063/5.0269149",
+      "followed_authors": [
+        "garnet-chan"
+      ],
+      "topics": [
+        "Quantum Computing Algorithms and Architecture",
+        "Quantum Mechanics and Applications",
+        "Quantum many-body systems"
+      ]
+    },
+    {
+      "id": "https://openalex.org/W4409094390",
+      "doi": "10.1103/prxquantum.6.020302",
+      "title": "Real-Time Operator Evolution in Two and Three Dimensions via Sparse Pauli Dynamics",
+      "authors": [
+        "Tomislav Begušić",
+        "Garnet Kin‐Lic Chan"
+      ],
+      "publication_date": "2025-04-02",
+      "year": 2025,
+      "type": "article",
+      "venue": "PRX Quantum",
+      "url": "https://doi.org/10.1103/prxquantum.6.020302",
+      "followed_authors": [
+        "garnet-chan"
+      ],
+      "topics": [
+        "Quantum Computing Algorithms and Architecture",
+        "Quantum Mechanics and Applications",
+        "Quantum many-body systems"
+      ]
+    },
+    {
+      "id": "https://openalex.org/W4408800470",
+      "doi": "10.1063/5.0249348",
+      "title": "Real-time propagation of adaptive sampling selected configuration interaction wave functions",
+      "authors": [
+        "Avijit Shee",
+        "Zhen Huang",
+        "Martin Head‐Gordon",
+        "K. Birgitta Whaley"
+      ],
+      "publication_date": "2025-03-24",
+      "year": 2025,
+      "type": "article",
+      "venue": "The Journal of Chemical Physics",
+      "url": "https://doi.org/10.1063/5.0249348",
+      "followed_authors": [
+        "martin-head-gordon"
+      ],
+      "topics": [
+        "Advanced Chemical Physics Studies",
+        "Laser-Matter Interactions and Applications",
+        "Spectroscopy and Quantum Chemical Studies"
+      ]
+    },
+    {
+      "id": "https://openalex.org/W4408310242",
+      "doi": "10.1016/j.ijhydene.2025.03.139",
+      "title": "An ab-initio study of two-dimensional MSeO3 (M = Ru, Rh, Pd and Pt) with high Néel-temperature intrinsic antiferromagnetism, negative Poisson's ratio and photocatalytic properties",
+      "authors": [
+        "Debing Long",
+        "Yuanke Sun",
+        "Xiaolin Wang",
+        "Chaosheng You",
+        "Ranfeng Zou",
+        "Teng Yin",
+        "Yingying Chen",
+        "Nikolay V. Tkachenko",
+        "Martin Head‐Gordon",
+        "Shan Peng"
+      ],
+      "publication_date": "2025-03-11",
+      "year": 2025,
+      "type": "article",
+      "venue": "International Journal of Hydrogen Energy",
+      "url": "https://doi.org/10.1016/j.ijhydene.2025.03.139",
+      "followed_authors": [
+        "martin-head-gordon"
+      ],
+      "topics": [
+        "2D Materials and Applications",
+        "Crystal Structures and Properties",
+        "Machine Learning in Materials Science"
+      ]
+    }
+  ]
+}

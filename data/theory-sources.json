@@ -1,0 +1,40 @@
+{
+  "title": "Theory Updates",
+  "description": "Recent papers on electronic structure, quantum Monte Carlo, and many-body theory from researchers I follow.",
+  "lookback_days": 730,
+  "max_papers": 80,
+  "researchers": [
+    {
+      "id": "martin-head-gordon",
+      "name": "Martin Head-Gordon",
+      "affiliation": "University of California, Berkeley",
+      "url": "https://mhggroupberkeley.com/",
+      "openalex_id": "A5015311244",
+      "orcid": "0000-0002-4309-6669"
+    },
+    {
+      "id": "shiwei-zhang",
+      "name": "Shiwei Zhang",
+      "affiliation": "Flatiron Institute / William & Mary",
+      "url": "https://physics.wm.edu/~shiwei/",
+      "openalex_id": "A5100449694",
+      "orcid": "0000-0001-9635-170X"
+    },
+    {
+      "id": "garnet-chan",
+      "name": "Garnet Chan",
+      "affiliation": "California Institute of Technology",
+      "url": "https://www.chan-lab.caltech.edu/",
+      "openalex_id": "A5082397890",
+      "orcid": "0000-0001-8009-6038"
+    },
+    {
+      "id": "james-shee",
+      "name": "James Shee",
+      "affiliation": "Rice University",
+      "url": "https://jsheelab.rice.edu/",
+      "openalex_id": "A5023400996",
+      "orcid": "0000-0001-8333-8151"
+    }
+  ]
+}

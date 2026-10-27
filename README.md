@@ -3,7 +3,7 @@
 An English personal website for **Zhi (Daniel) Gong**, Ph.D. student in Chemistry
 at Rice University. Prepared for **https://drzhigong.github.io/**.
 
-The public site includes Home, Research, Publications, Blog, and About.
+The public site includes Home, Research, Publications, Blog, Theory Updates, and About.
 Research and biography are based on the CV supplied in October 2026. Public
 publications come from [ORCID](https://orcid.org/0000-0002-1316-4675).
 
@@ -79,6 +79,7 @@ when the workflow succeeds.
 | Biography, research descriptions, education, honors, skills | `data/profile.json` |
 | Manuscript status or patent entries | `data/manual-publications.json` |
 | Published works | Update their public visibility/details in ORCID |
+| Theory researchers and reading-list settings | `data/theory-sources.json` |
 | Public articles | `content/posts/*.md` |
 | Site styling | `assets/site.css` |
 | Shared header, navigation, footer | `templates/base.html` |
@@ -91,7 +92,7 @@ After editing, preview, then publish:
 ```
 
 `-WhatIf` shows intended actions without writes. `-NoPush` refreshes, builds, and
-commits locally. `-SkipSync` uses the saved ORCID snapshot for the local build;
+commits locally. `-SkipSync` uses the saved ORCID and theory snapshots for the local build;
 the GitHub deployment still requires a successful fresh ORCID request.
 An existing local commit can be pushed by rerunning the update script even if
 there are no new edits. Git errors stop the script; it never pulls, rebases,
@@ -99,6 +100,34 @@ or force-pushes. Only the listed website source paths are staged. Local editing
 tools, `.local/`, raw PDFs, temporary files, and generated output are excluded.
 The update script refuses draft Markdown in `content/posts/`; private drafts
 belong in `.local/drafts/` until they are ready for public source control.
+
+## Theory Updates
+
+`/theory/` is a separate reading list of recent theory papers by Martin Head-Gordon,
+Shiwei Zhang, Garnet Chan, and James Shee. It uses fixed, verified OpenAlex author IDs,
+filters titles and indexed topics for theoretical work, and links to the original
+publication. It is an automated selection rather than a complete publication record.
+Indexing can be delayed or imperfect; publisher pages remain the source of record.
+
+The daily Pages workflow (11:17 UTC, subject to GitHub scheduling delays) refreshes
+this list alongside the personal publication record. It keeps the last saved papers
+for a source that fails and displays that source's last successful refresh. GitHub
+Actions caches the reading-list snapshot between runs; after cache eviction, the
+checked-in snapshot is the fallback. A theory-source outage does not block deployment.
+
+Edit `data/theory-sources.json` to change followed researchers, the two-year lookback,
+or the maximum of 80 papers. Verify a researcher's OpenAlex ID against their official
+profile before adding them. To refresh locally:
+
+```powershell
+python scripts/sync_theory.py
+```
+
+Basic OpenAlex requests currently work without a key. An optional `OPENALEX_API_KEY`
+environment variable, or GitHub repository secret with that name, can raise the API
+allowance. Never put a key in site data or browser scripts. See the
+[OpenAlex authentication documentation](https://help.openalex.org/api/authentication/).
+The browser filters the saved list locally and does not contact the API.
 
 ## Writing blog posts
 

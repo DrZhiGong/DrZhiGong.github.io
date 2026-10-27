@@ -47,6 +47,30 @@ jobs:
         # No generated files are committed back to the repository.
         run: python scripts/sync_orcid.py
 
+      - name: Restore the last theory reading-list snapshot
+        id: theory-cache
+        continue-on-error: true
+        uses: actions/cache/restore@v5
+        with:
+          path: data/theory-papers.json
+          key: theory-v1-${{ hashFiles('data/theory-sources.json', 'scripts/sync_theory.py') }}-${{ github.run_id }}-${{ github.run_attempt }}
+          restore-keys: |
+            theory-v1-${{ hashFiles('data/theory-sources.json', 'scripts/sync_theory.py') }}-
+
+      - name: Refresh followed theory researchers
+        # No key is needed for basic requests. A repository secret can raise the API allowance.
+        # Source failures retain cached papers and show their last successful update dates.
+        env:
+          OPENALEX_API_KEY: ${{ secrets.OPENALEX_API_KEY }}
+        run: python scripts/sync_theory.py
+
+      - name: Preserve the theory snapshot for the next refresh
+        continue-on-error: true
+        uses: actions/cache/save@v5
+        with:
+          path: data/theory-papers.json
+          key: ${{ steps.theory-cache.outputs.cache-primary-key }}
+
       - name: Build the English website
         run: python scripts/build_site.py --base-url https://drzhigong.github.io
 

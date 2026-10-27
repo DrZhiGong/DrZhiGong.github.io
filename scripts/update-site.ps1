@@ -1,6 +1,6 @@
 <#
 .SYNOPSIS
-Refresh ORCID, build, commit website source files, and push main.
+Refresh ORCID and theory papers, build, commit website source files, and push main.
 .DESCRIPTION
 Runs only in this site's own main-branch repository with the expected origin.
 Stops on sync/build/commit/push failures. Never pulls, rebases, or force-pushes.
@@ -112,7 +112,7 @@ foreach ($stagedPath in $alreadyStaged) {
 
 if ($WhatIfPreference) {
     Write-Host 'What if: verify only public-ready posts and public source files can be committed.'
-    if (-not $SkipSync) { Write-Host 'What if: refresh data/publications.json from the public ORCID API.' }
+    if (-not $SkipSync) { Write-Host 'What if: refresh public ORCID publications and the theory reading list.' }
     Write-Host "What if: build _site/ for $siteUrl."
     Write-Host "What if: stage only these website paths: $($allowedPaths -join ', ')."
     Write-Host 'What if: commit staged changes if present.'
@@ -146,8 +146,9 @@ try {
     Invoke-CheckedPython -PythonArguments @('scripts/check_public_source.py', '--worktree')
     if (-not $SkipSync) {
         Invoke-CheckedPython -PythonArguments @('scripts/sync_orcid.py')
+        Invoke-CheckedPython -PythonArguments @('scripts/sync_theory.py')
     } else {
-        Write-Host 'ORCID refresh skipped; building with the saved publications snapshot.'
+        Write-Host 'Publication refresh skipped; building with the saved ORCID and theory snapshots.'
     }
     Invoke-CheckedPython -PythonArguments @('scripts/build_site.py', '--base-url', $siteUrl)
 
