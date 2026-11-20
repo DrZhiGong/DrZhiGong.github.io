@@ -1,5 +1,5 @@
 +++
-"title" = "A Small Story at the End of the Fall 2025 Admissions Cycle"
+"title" = "A Small Story and the Tormented one at the End of the Fall 2025 Admissions Cycle"
 "date" = "2025-02-01"
 "description" = "A reflection from the close of the Fall 2025 PhD admissions cycle, on growing up, changing direction, and learning who I might become."
 "tags" = ["25 Fall", "Personal reflections", "Education"]
