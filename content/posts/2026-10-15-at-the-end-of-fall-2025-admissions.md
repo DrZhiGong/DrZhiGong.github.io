@@ -32,7 +32,7 @@ I knew how to be a good student. I did not really know how to be a child.
 
 I wanted to feel like a whole person. Almost without noticing, I began to imitate the people around me: how they expressed their feelings, how they spoke to one another, how they seemed to know what to do. I was trying to learn something about being human that I felt I had missed.
 
-Eventually, I entered one of China's 985 universities and chose chemistry, a major I had often heard people warn against. University gave me a little more room to breathe. I maintained a rank of around third in my year, and, after a number of experiences along the way, I decided to prepare for a PhD.
+Eventually, I entered one of China's top universities and chose chemistry, a major I had often heard people warn against. University gave me a little more room to breathe. I maintained a rank of around third in my year, and, after a number of experiences along the way, I decided to prepare for a PhD.
 
 I began in polymer materials and later moved into theoretical chemistry during an exchange at Berkeley. Along the way, I met many kind and interesting teachers and older students. When I think of that period, they give me warm memories to return to.
 
